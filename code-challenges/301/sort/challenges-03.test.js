@@ -171,7 +171,28 @@ You DO NOT need to use your solution to Challenge 9 in completing Challenge 10.
 ------------------------------------------------------------------------------------------------ */
 
 const sortSchedule = (arr) => {
-  // Solution code here...
+  let dayOrder = {
+    'Monday': 1,
+    'Tuesday': 2,
+    'Wednesday': 3,
+    'Thursday': 4,
+    'Friday': 5
+  }
+
+  arr.sort( (a, b) => {
+    let dayOne = a.dayOfWeek;
+    let dayTwo = b.dayOfWeek;
+
+    if(dayOne === dayTwo) {
+      if(a.start === b.start) {
+        return a.end > b.end;
+      }
+      return a.start > b.start;
+    }
+    return dayOrder[dayOne] > dayOrder[dayTwo];
+  })
+
+  return arr;
 };
 
 /* ------------------------------------------------------------------------------------------------
