@@ -77,7 +77,15 @@ const gruffaloCrumble = {
 
 const listFoods = (recipe) => {
   let result = [];
-  // Solution code here...
+
+  for (let i = 0; i < recipe.ingredients.length; i++) {
+    let regex = /^([^ ]+[ ]+[^ ]+)[ ]/g;
+    let str = recipe.ingredients[i];
+
+    regex.exec(str);
+    result.push(recipe.ingredients[i].slice(regex.lastIndex, recipe.ingredients[i].length));
+  }
+
   return result;
 }
 
@@ -91,7 +99,15 @@ You may also use other string or array methods.
 
 const splitFoods = (recipe) => {
   let result = [];
-  // Solution code here...
+
+  for (let i = 0; i < recipe.ingredients.length; i++) {
+    let regex = /^([^ ]+[ ]+[^ ]+)[ ]/g;
+    let str = recipe.ingredients[i];
+    let splitArray = str.split(regex);
+
+    result.push(splitArray[1]);
+  }
+
   return result;
 }
 
