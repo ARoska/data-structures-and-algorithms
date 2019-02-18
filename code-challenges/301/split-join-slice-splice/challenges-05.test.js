@@ -101,11 +101,11 @@ const splitFoods = (recipe) => {
   let result = [];
 
   for (let i = 0; i < recipe.ingredients.length; i++) {
-    let regex = /^([^ ]+[ ]+[^ ]+)[ ]/g;
+    let regex = /^([^ ]+[ ]+[^ ]+)[ ]/;
     let str = recipe.ingredients[i];
     let splitArray = str.split(regex);
 
-    result.push(splitArray[1]);
+    result.push(splitArray[2]);
   }
 
   return result;
