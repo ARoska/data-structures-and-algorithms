@@ -37,10 +37,16 @@ For example, notInFirstArray([1,2,3], [1,2,3,4]) returns [4].
 ------------------------------------------------------------------------------------------------ */
 
 const notInFirstArray = (forbiddenValues, arr) => {
-  let answer = arr.filter( (val) => {
-    return forbiddenValues.indexOf(val) > -1;
+  return arr.filter( (val) => {
+    let removed = true;
+    for (let i = 0; i < forbiddenValues.length; i++){
+      if (forbiddenValues[i] === val) {
+        removed = false;
+        break;
+      }
+    }
+    return removed;
   })
-  return answer;
 };
 
 /* ------------------------------------------------------------------------------------------------
