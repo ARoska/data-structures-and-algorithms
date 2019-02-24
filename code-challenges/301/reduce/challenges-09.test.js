@@ -9,7 +9,12 @@ Note: You may not use the array's built-in length property.
 ------------------------------------------------------------------------------------------------ */
 
 const countNumberOfElements = (arr) => {
-  // Solution code here...
+  let number = arr.reduce( function(acc) {
+    acc++;
+    return acc;
+  }, 0);
+  console.log('number', number);
+  return number;
 };
 
 /* ------------------------------------------------------------------------------------------------
