@@ -13,7 +13,6 @@ const countNumberOfElements = (arr) => {
     acc++;
     return acc;
   }, 0);
-  console.log('number', number);
   return number;
 };
 
@@ -161,7 +160,12 @@ Hint: The accumulator should begin as { count: 0, sum: 0 }
 ------------------------------------------------------------------------------------------------ */
 
 const calculateAverage = (arr) => {
-  // Solution code here...
+  let arrTotals = arr.reduce( (acc, val) => {
+    acc.count++;
+    acc.sum = acc.sum + val;
+    return acc;
+  }, { count: 0, sum: 0 } );
+  return arrTotals.sum / arrTotals.count;
 };
 
 /* ------------------------------------------------------------------------------------------------
