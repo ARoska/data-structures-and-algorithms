@@ -149,7 +149,16 @@ Write a function named findShortest that, given the Star Wars data from Challeng
 ------------------------------------------------------------------------------------------------ */
 
 let findShortest = (data) => {
-  // Solution code here...
+  return 'incomplete';
+  return data.reduce( (acc, val) => {
+    if (acc >= val.name.length) {
+      acc = val.name;
+      console.log(acc);
+      return acc;
+    } else {
+      return acc;
+    }
+  }, '')
 }
 
 /* ------------------------------------------------------------------------------------------------
