@@ -129,7 +129,17 @@ let starWarsData = [{
 }]
 
 let findMaleAndFemale = (data) => {
-  // Solution code here...
+  let newArr = data.map( (characters) => {
+    if (characters.gender === 'female') {
+      return characters.name;
+    } if (characters.gender === 'male') {
+      return characters.name;
+    } else {
+      return null;
+    }
+  });
+  newArr = newArr.filter( (val) => (val === null) ? false : true)
+  return newArr.join(' and ');
 }
 
 /* ------------------------------------------------------------------------------------------------
