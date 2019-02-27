@@ -23,13 +23,16 @@ const alkiBeach = [33, 31, 147, 130, 27, 93, 38, 126, 141, 63, 46, 17];
 const cookieStores = [firstPike, seaTac, seattleCenter, capHill, alkiBeach];
 
 const grandTotal = (stores) => {
-  // const totalTotals = [];
-  // for(let i = 0; i < stores.length; i++) {
-  //   for(let j = 0; j < stores[i].length; j++) {
-  //     let dailyTotal += stores[i][j];
-  //   }
-  // }
+  const totalTotals = new Array(hoursOpen.length).fill(0);
 
+  for(let i = 0; i < stores.length; i++) {
+    for(let j = 0; j < stores[i].length; j++) {
+      let value = stores[i][j];
+      totalTotals[j] += value;
+    }
+  }
+  console.log(totalTotals);
+  return totalTotals;
 }
 
 /* ------------------------------------------------------------------------------------------------
@@ -93,7 +96,14 @@ The top row of the board is considered row zero and row numbers increase as they
 ------------------------------------------------------------------------------------------------ */
 
 const battleship = (board, row, col) => {
-  //  Solution code here...
+  for (let i = 0; i < board.length; i++) {
+    let board = [];
+    for (let x = 0; x < row; x++) {
+      for(let y = 1; y < col; y++) {
+      
+      }
+    }
+  }
 }
 
 /* ------------------------------------------------------------------------------------------------
