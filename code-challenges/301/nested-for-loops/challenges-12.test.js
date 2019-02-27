@@ -23,7 +23,12 @@ const alkiBeach = [33, 31, 147, 130, 27, 93, 38, 126, 141, 63, 46, 17];
 const cookieStores = [firstPike, seaTac, seattleCenter, capHill, alkiBeach];
 
 const grandTotal = (stores) => {
-  // Solution code here...
+  // const totalTotals = [];
+  // for(let i = 0; i < stores.length; i++) {
+  //   for(let j = 0; j < stores[i].length; j++) {
+  //     let dailyTotal += stores[i][j];
+  //   }
+  // }
 
 }
 
@@ -60,7 +65,13 @@ const errands = [
 ]
 
 const howManyTreats = (arr) => {
-  // Solution code here...
+  let totalTreats = 0;
+  for(let i = 0; i < arr.length; i++) {
+    for(let j = 0; j < arr[i].items.length; j++) {
+      totalTreats += (arr[i].items[j].name === 'Treats') ? arr[i].items[j].quantity : 0;
+    }
+  }
+  return totalTreats;
 }
 
 /* ------------------------------------------------------------------------------------------------
