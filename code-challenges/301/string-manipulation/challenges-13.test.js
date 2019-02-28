@@ -66,8 +66,6 @@ const allHappy = (arr) => {
     if(arr[i].includes(':)') === false) {
       answer = false;
       break;
-    } else {
-      answer = true;
     }
   }
   return answer;
@@ -80,7 +78,7 @@ Write a function named findAnything that takes in an array of strings, along wit
 ------------------------------------------------------------------------------------------------ */
 
 const findAnything = (arr, target) => {
-  // Solution code here...
+  return arr.filter( (val) => val.includes(target));
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -90,7 +88,13 @@ Write a function named findEvery that takes in an array of strings, along with a
 ------------------------------------------------------------------------------------------------ */
 
 const findEvery = (arr, target) => {
-  // Solution code here...
+  let answer = true;
+  arr.forEach( (val) => {
+    if(val.includes(target) === false) {
+      answer = false;
+    };
+  })
+  return answer;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -106,7 +110,7 @@ For example, [['Brook Testing', 'Actual Person'], ['Human Person', 'Brook again'
 ------------------------------------------------------------------------------------------------ */
 
 const unenrollBrook = (arr) => {
-  // Solution code here...
+  return a
 };
 
 /* ------------------------------------------------------------------------------------------------
