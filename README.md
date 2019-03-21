@@ -1,3 +1,13 @@
-# data-structures-and-algorithms
+# Data Structures and Algorithms
+#### Code Challenges 
+##### *Author: Andrew Roska*
 
-This repo is for practicing and maintaining daily code challenges given to me by Code Fellows in my 301 and 401 courses.
+------------------------------
+
+## Table of Contents
+##### C#/.NET Core 
+
+
+
+##### 301 JavaScript
+
