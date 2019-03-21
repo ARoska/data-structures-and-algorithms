@@ -5,9 +5,10 @@
 ------------------------------
 
 ## Table of Contents
-##### C#/.NET Core 
+#### C#/.NET Core 
+
+ [-Binary Search](https://github.com/Roketsu86/data-structures-and-algorithms/tree/master/code-challenges/C%23/BinarySearch)
 
 
-
-##### 301 JavaScript
+#### JavaScript
 
