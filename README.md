@@ -9,6 +9,7 @@
 
 * [Binary Search](https://github.com/Roketsu86/data-structures-and-algorithms/tree/master/code-challenges/C%23/BinarySearch)
 
+* [Linked Lists](https://github.com/Roketsu86/data-structures-and-algorithms/tree/master/code-challenges/C%23/LinkedListApp)
 
 #### JavaScript
 
