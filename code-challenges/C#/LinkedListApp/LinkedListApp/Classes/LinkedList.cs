@@ -202,30 +202,6 @@ namespace LinkedListApp.Classes
 
             Current = Head;
             return returnArr;
-            //int[] returnArr = new int[0];
-            //int[] tempArr = new int[returnArr.Length + 1];
-
-            //while (Current.Next != null)
-            //{
-            //    tempArr = new int[returnArr.Length + 1];
-            //    for (int i = 0; i < returnArr.Length; i++)
-            //    {
-            //        tempArr[i] = returnArr[i];
-            //    }
-
-            //    tempArr[tempArr.Length - 1] = current.data;
-            //    returnArr = tempArr;
-            //    Current = Current.Next;
-            //}
-            //tempArr = new int[returnArr.Length + 1];
-            //for (int i = 0; i < returnArr.Length; i++)
-            //{
-            //    tempArr[i] = returnArr[i];
-            //}
-
-            //tempArr[tempArr.Length - 1] = Current.Value;
-            //returnArr = tempArr;
-
         }
 
     }
