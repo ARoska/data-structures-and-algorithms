@@ -10,5 +10,9 @@ Implement a Singley-Linked List structure and test for accuracy.
 * Define a method called print which takes in no arguments and returns a collection all of the current Node values in the Linked List.
 ## Approach & Efficiency
 
+I have no idea what to put here...
+
 
 ## API
+
+I don't know what goes here either... Is this a description of what methods in my challenge are declared publec?  Or is this "public" as in what can be used by other people?
