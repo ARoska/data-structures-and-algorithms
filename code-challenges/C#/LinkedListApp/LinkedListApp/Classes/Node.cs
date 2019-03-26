@@ -4,10 +4,16 @@ using System.Text;
 
 namespace LinkedListApp.Classes
 {
+
     public class Node
     {
-        public Node next;
+        public int Value { get; set; }
 
-        public int data;
+        public Node Next { get; set; }
+
+        public Node(int value)
+        {
+            Value = value;
+        }
     }
 }

@@ -11,20 +11,12 @@ namespace LinkedListApp
 
             int counter = 47;
 
-            linkedList.Insert(counter);
-            counter++;
-            linkedList.Insert(counter);
-            counter++;
-            linkedList.Insert(counter);
-            counter++;
-            linkedList.Insert(counter);
-            counter++;
-            linkedList.Insert(counter);
-            counter++;
-            linkedList.Insert(counter);
-            counter++;
-            linkedList.Insert(counter);
-            counter++;
+            for (int i = 0; i < 5; i++)
+            {
+                Node newNode = new Node(counter);
+                linkedList.Insert(newNode);
+                counter++;
+            }
 
             linkedList.PrintAllNodes();
 
