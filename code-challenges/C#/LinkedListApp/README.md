@@ -16,7 +16,7 @@ Implement a Singley-Linked List structure and test for accuracy.
 
 I have no idea what to put here...
 
-[Whiteboarding for Link List Insertions](https://github.com/Roketsu86/data-structures-and-algorithms/blob/master/assets/ll_insertions.jpg)
+![Whiteboarding for Link List Insertions](https://github.com/Roketsu86/data-structures-and-algorithms/blob/master/assets/ll_insertions.jpg)
 ## API
 
 I don't know what goes here either... Is this a description of what methods in my challenge are declared publec?  Or is this "public" as in what can be used by other people?
