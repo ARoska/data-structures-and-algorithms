@@ -8,4 +8,4 @@ Write a function called BinarySearch which takes in 2 parameters: a sorted array
 For this challenge we took a very straightforward approach.  We drew out a couple of sample arrays and illustrated what we would check as we itterated accross each one, and what the outcome would be if we did or did not find the search key.  We then wrote up a quick O(N) method to complete the challenge.
 
 ## Solution
-![Solution Whiteboard](https://github.com/Roketsu86/data-structures-and-algorithms/blob/master/assets/array_binary_search.jpg)
+![Solution Whiteboard](https://github.com/Roketsu86/data-structures-and-algorithms/blob/master/assets/BinarySearch/array_binary_search-wb.jpg)
