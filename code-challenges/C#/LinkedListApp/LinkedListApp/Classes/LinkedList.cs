@@ -55,6 +55,12 @@ namespace LinkedListApp.Classes
         {
             Current = Head;
 
+            if (Head == null)
+            {
+                Head = node;
+                return;
+            }
+
             while (Current.Next != null)
             {
                 Current = Current.Next;
@@ -158,16 +164,57 @@ namespace LinkedListApp.Classes
         {
             Current = Head;
 
+            Console.WriteLine("-------------------------\n" +
+                "");
             while (Current.Next != null)
             {
-                Console.WriteLine(Current.Value);
+                Console.Write($"{Current.Value} ----> ");
                 Current = Current.Next;
             }
 
-            Console.WriteLine(Current.Value +
-                "\n" +
-                "End of Linked List.");
-            Console.ReadKey();
+            Console.WriteLine($"{Current.Value} ----> Null");
+            Console.WriteLine("\n" +
+                "-------------------------");
+        }
+
+        /// <summary>
+        /// Returns the Value of a Node that is K Nodes from the end of the Linked List
+        /// </summary>
+        /// <param name="k">Target position from end of LL</param>
+        /// <returns>Value of K</returns>
+        public Node ReturnKthFromEnd(int k)
+        {
+            if (k < 0)
+            {
+                return null;
+            }
+
+            Current = Head;
+            int counter = 0;
+
+            while (Current != null)
+            {
+                counter++;
+                Current = Current.Next;
+            }
+
+            if (k > counter)
+            {
+                return null;
+            }
+
+            Current = Head;
+            if (k == 0)
+            {
+                counter--;
+            }
+
+            for (int i = 0; i < (counter - k); i++)
+            {
+                Current = Current.Next;
+            }
+
+            return Current;
         }
 
         /// <summary>
@@ -202,30 +249,6 @@ namespace LinkedListApp.Classes
 
             Current = Head;
             return returnArr;
-            //int[] returnArr = new int[0];
-            //int[] tempArr = new int[returnArr.Length + 1];
-
-            //while (Current.Next != null)
-            //{
-            //    tempArr = new int[returnArr.Length + 1];
-            //    for (int i = 0; i < returnArr.Length; i++)
-            //    {
-            //        tempArr[i] = returnArr[i];
-            //    }
-
-            //    tempArr[tempArr.Length - 1] = current.data;
-            //    returnArr = tempArr;
-            //    Current = Current.Next;
-            //}
-            //tempArr = new int[returnArr.Length + 1];
-            //for (int i = 0; i < returnArr.Length; i++)
-            //{
-            //    tempArr[i] = returnArr[i];
-            //}
-
-            //tempArr[tempArr.Length - 1] = Current.Value;
-            //returnArr = tempArr;
-
         }
 
     }

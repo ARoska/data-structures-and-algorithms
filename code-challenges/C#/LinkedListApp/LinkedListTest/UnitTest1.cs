@@ -6,6 +6,7 @@ namespace LinkedListTest
 {
     public class UnitTest1
     {
+
         [Fact]
         public void NewLinkedListShouldBeNullUntilPopulated()
         {
@@ -235,6 +236,104 @@ namespace LinkedListTest
             int[] actualReturn = linkedList.RertunAllNodes();
 
             Assert.Equal(expectedReturn, actualReturn);
+        }
+
+        [Fact]
+        public void ReturnThirdValueFromTheEnd()
+        {
+            Node nodeOne = new Node(47);
+            Node nodeTwo = new Node(3572);
+            Node nodeThree = new Node(1);
+            Node nodeFour = new Node(50);
+            Node nodeFive = new Node(6752347);
+
+            LinkedList linkedList = new LinkedList(nodeOne);
+
+            linkedList.Append(nodeTwo);
+            linkedList.Append(nodeThree);
+            linkedList.Append(nodeFour);
+            linkedList.Append(nodeFive);
+
+            Node expectedReturn = nodeThree;
+
+            Node actualReturn = linkedList.ReturnKthFromEnd(3);
+
+            Assert.Equal(expectedReturn.Value, actualReturn.Value);
+        }
+
+        [Fact]
+        public void ReturnZerothValueFromTheEnd()
+        {
+            Node nodeOne = new Node(47);
+            Node nodeTwo = new Node(3572);
+            Node nodeThree = new Node(1);
+            Node nodeFour = new Node(50);
+            Node nodeFive = new Node(6752347);
+
+            LinkedList linkedList = new LinkedList(nodeOne);
+
+            linkedList.Append(nodeTwo);
+            linkedList.Append(nodeThree);
+            linkedList.Append(nodeFour);
+            linkedList.Append(nodeFive);
+
+            Node expectedReturn = nodeFive;
+
+            Node actualReturn = linkedList.ReturnKthFromEnd(0);
+
+            Assert.Equal(expectedReturn.Value, actualReturn.Value);
+        }
+
+        [Fact]
+        public void ReturnZerothValueFromTheEndWithListSizeOne()
+        {
+            Node nodeOne = new Node(47);
+
+            LinkedList linkedList = new LinkedList(nodeOne);
+
+            Node expectedReturn = nodeOne;
+
+            Node actualReturn = linkedList.ReturnKthFromEnd(0);
+
+            Assert.Equal(expectedReturn.Value, actualReturn.Value);
+        }
+
+        [Fact]
+        public void WillReturnNullIfKIsLargerThanList()
+        {
+            Node nodeOne = new Node(47);
+            Node nodeTwo = new Node(3572);
+            Node nodeThree = new Node(1);
+            Node nodeFour = new Node(50);
+            Node nodeFive = new Node(6752347);
+
+            LinkedList linkedList = new LinkedList(nodeOne);
+
+            linkedList.Append(nodeTwo);
+            linkedList.Append(nodeThree);
+            linkedList.Append(nodeFour);
+            linkedList.Append(nodeFive);
+
+            Assert.Null(linkedList.ReturnKthFromEnd(10));
+        }
+
+        [Fact]
+        public void WillReturnNullIfKIsNegative()
+        {
+            Node nodeOne = new Node(47);
+            Node nodeTwo = new Node(3572);
+            Node nodeThree = new Node(1);
+            Node nodeFour = new Node(50);
+            Node nodeFive = new Node(6752347);
+
+            LinkedList linkedList = new LinkedList(nodeOne);
+
+            linkedList.Append(nodeTwo);
+            linkedList.Append(nodeThree);
+            linkedList.Append(nodeFour);
+            linkedList.Append(nodeFive);
+
+            Assert.Null(linkedList.ReturnKthFromEnd(-2));
         }
 
         [Fact]
