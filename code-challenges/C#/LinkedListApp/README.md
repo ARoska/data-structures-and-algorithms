@@ -1,12 +1,9 @@
 # Linked List
 #### *Author: Andrew Roska*
 
-------------------------------
-
 ## Description
-A C# implementation of a `Singly Linked List`. Singly Linked Lists contain individual nodes that have a reference to the `Next` node in the list as well as a `Value`. The methods of this `Linked List` are `Insert`, `Insert Before`, `Append`, `Insert After`,  `Includes`, `Print All Nodes`, `Return All Nodes` and `Return Kth From End`.
 
-------------------------------
+A C# implementation of a `Singly Linked List`. Singly Linked Lists contain individual nodes that have a reference to the `Next` node in the list as well as a `Value`. The methods of this `Linked List` are `Insert`, `Insert Before`, `Append`, `Insert After`,  `Includes`, `Print All Nodes`, `Return All Nodes` and `Return Kth From End`.
 
 ## Methods
 
@@ -82,5 +79,3 @@ A C# implementation of a `Singly Linked List`. Singly Linked Lists contain indiv
 1.0: *Initial build* - 24 March 2019
 
 ------------------------------
-
-For more information on Markdown: https://www.markdownguide.org/cheat-sheet
