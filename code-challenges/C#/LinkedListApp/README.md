@@ -73,7 +73,7 @@ A C# implementation of a `Singly Linked List`. Singly Linked Lists contain indiv
 ------------------------------
 
 ## Change Log
-1.2: *Added Merge Method* - 27 March 2019
+1.3: *Added Merge Method* - 27 March 2019
 
 ![Mege Whiteboard](https://github.com/Roketsu86/data-structures-and-algorithms/blob/master/assets/LinkedListApp/ll_merge-wb.jpg)
 
