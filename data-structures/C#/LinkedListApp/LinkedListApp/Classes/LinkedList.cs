@@ -250,51 +250,6 @@ namespace LinkedListApp.Classes
             Current = Head;
             return returnArr;
         }
-
-        /// <summary>
-        /// Merges two linked lists into a single list in a "zipper" fashion,
-        /// alternating Nodes from list A and list B and returns a reference to the merged list.
-        /// If one list is Null returns just the Non-Null list.
-        /// If both lists are Null returns a Null list.
-        /// </summary>
-        /// <param name="linkedListA">First list to merge.</param>
-        /// <param name="linkedListB">Second list to merge.</param>
-        /// <returns>Reference to the now-merged list.</returns>
-        public static LinkedList Merge(LinkedList linkedListA, LinkedList linkedListB)
-        {
-            if (linkedListA.Head == null)
-            {
-                return linkedListB;
-            }
-
-            if (linkedListB.Head == null)
-            {
-                return linkedListA;
-            }
-
-            if (linkedListA.Head == null && linkedListB == null)
-            {
-                return null;
-            }
-
-            Node CurrentA = linkedListA.Head;
-            Node CurrentB = linkedListB.Head;
-
-            while (CurrentA != null && CurrentB != null)
-            {
-                linkedListB.Head = CurrentB.Next;
-                CurrentB.Next = CurrentA.Next;
-                CurrentA.Next = CurrentB;
-                CurrentA = CurrentB.Next;
-                CurrentB = linkedListB.Head;
-            }
-
-            if (CurrentB != null)
-            {
-                CurrentA.Next = CurrentB;
-            }
-
-            return linkedListA;
-        }
+        
     }
 }

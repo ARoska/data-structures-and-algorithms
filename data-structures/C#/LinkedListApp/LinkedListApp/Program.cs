@@ -69,32 +69,6 @@ namespace LinkedListApp
             Console.ReadKey();
             Console.Clear();
 
-            Node nodeOneB = new Node(54);
-            Node nodeTwoB = new Node(132);
-            Node nodeThreeB = new Node(6);
-            Node nodeFourB = new Node(-341);
-            Node nodeFiveB = new Node(975);
-
-            LinkedList linkedListB = new LinkedList(nodeOneB);
-
-            linkedListB.Append(nodeTwoB);
-            linkedListB.Append(nodeThreeB);
-            linkedListB.Append(nodeFourB);
-            linkedListB.Append(nodeFiveB);
-
-            Console.WriteLine("Merging two lists.");
-            Console.WriteLine("List 1: ");
-            linkedListA.PrintAllNodes();
-            Console.WriteLine("List 2: ");
-            linkedListB.PrintAllNodes();
-            Console.WriteLine();
-
-            LinkedList mergedList = LinkedList.Merge(linkedListA, linkedListB);
-
-            Console.WriteLine("Merged List: ");
-            mergedList.PrintAllNodes();
-            Console.ReadKey();
-            Console.Clear();
         }
     }
 }
