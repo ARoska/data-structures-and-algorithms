@@ -1,19 +1,31 @@
-﻿using System;
+﻿using LinkedListApp.Classes;
+using System;
 
 namespace LLMerge
 {
-    class Program
+    public class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Node nodeOneA = new Node(47);
+            Node nodeTwoA = new Node(3572);
+            Node nodeThreeA = new Node(1);
+            Node nodeFourA = new Node(50);
+            Node nodeFiveA = new Node(6752347);
+
             Node nodeOneB = new Node(54);
             Node nodeTwoB = new Node(132);
             Node nodeThreeB = new Node(6);
             Node nodeFourB = new Node(-341);
             Node nodeFiveB = new Node(975);
 
+            LinkedList linkedListA = new LinkedList(nodeOneA);
             LinkedList linkedListB = new LinkedList(nodeOneB);
+
+            linkedListA.Append(nodeTwoA);
+            linkedListA.Append(nodeThreeA);
+            linkedListA.Append(nodeFourA);
+            linkedListA.Append(nodeFiveA);
 
             linkedListB.Append(nodeTwoB);
             linkedListB.Append(nodeThreeB);
@@ -27,7 +39,7 @@ namespace LLMerge
             linkedListB.PrintAllNodes();
             Console.WriteLine();
 
-            LinkedList mergedList = LinkedList.Merge(linkedListA, linkedListB);
+            LinkedList mergedList = MergeLists(linkedListA, linkedListB);
 
             Console.WriteLine("Merged List: ");
             mergedList.PrintAllNodes();
@@ -44,7 +56,7 @@ namespace LLMerge
         /// <param name="linkedListA">First list to merge.</param>
         /// <param name="linkedListB">Second list to merge.</param>
         /// <returns>Reference to the now-merged list.</returns>
-        public static LinkedList Merge(LinkedList linkedListA, LinkedList linkedListB)
+        public static LinkedList MergeLists(LinkedList linkedListA, LinkedList linkedListB)
         {
             if (linkedListA.Head == null)
             {
