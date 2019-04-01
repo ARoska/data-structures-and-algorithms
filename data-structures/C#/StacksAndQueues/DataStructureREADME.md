@@ -22,30 +22,6 @@ A C# implementation of a `Stacks and Queues`. A `Stack` refers to one or more `N
 | Peek (Queue) | Returns the data of the front `Node` in the `Queue`.  Should always be used before using `Pop`. | O(1) | O(1) | myQueue.Peek() |
 
 
-------------------------------
-
-## Visuals
-
-
-##### Push Method
-*The Push Method takes in a `Node` as a prameter and places that `Node` at the top of the `Stack`.*
-![Image 1](https://via.placeholder.com/750x500)
-##### Pop Method
-*The Pop Method removes the `Node` at the top of the `Stack` and returns any data that `Node` may have been holding.*
-![Image 1](https://via.placeholder.com/750x500)
-##### Peek (Stack) Method
-*The Peek (Stack) Method returns the data in the `Node` at the top of the `Stack`.  This should always be used to confirm that a `Node` is present before using Pop().*
-![Image 1](https://via.placeholder.com/750x500)
-##### Enqueue Method
-*The Enqueue Method takes in a `Node` as a prameter and places that `Node` at the back of the `Queue`.*
-![Image 1](https://via.placeholder.com/750x500)
-##### Dequeue Method
-*The Dequeue Method removes the `Node` at the front of the `Queue` and returns any data that `Node` may have been holding.*
-![Image 1](https://via.placeholder.com/750x500)
-##### Peek (Queue) Method
-*The Peek (Queue) Method returns the data in the `Node` at the front of the `Queue`.  This should always be used to confirm that a `Node` is present before using Dequeue().*
-![Image 1](https://via.placeholder.com/750x500)
-
 
 ------------------------------
 
