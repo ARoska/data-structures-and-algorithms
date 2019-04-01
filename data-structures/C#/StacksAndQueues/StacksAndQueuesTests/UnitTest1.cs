@@ -96,5 +96,26 @@ namespace StacksAndQueuesTests
             Assert.Null(top);
         }
 
+        [Fact]
+        public void CanCreateEmptyQueue()
+        {
+            MyQueue<string> queue = new MyQueue<string>();
+
+            string emptyFront = queue.Peek();
+
+            Assert.Null(emptyFront);
+        }
+
+        //[Fact]
+        public void CanEnqueOnToQueue()
+        {
+            MyQueue<string> queue = new MyQueue<string>();
+            Node<string> node1 = new Node<string>("One");
+
+            queue.Enque(node1);
+            string front = queue.Peek();
+
+            Assert.Equal("One", front);
+        }
     }
 }
