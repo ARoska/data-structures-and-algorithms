@@ -24,7 +24,7 @@ Given two `Linked Lists` merge them togethe into a single `List` in a "zipper" m
 ## Change Log
 1.0: *Initial Creation of Merge Method* - 27 March 2019
 
-![Mege Whiteboard](https://github.com/Roketsu86/data-structures-and-algorithms/blob/master/assets/LinkedListApp/ll_merge-wb.jpg)
+![Merge Whiteboard](https://github.com/Roketsu86/data-structures-and-algorithms/blob/master/assets/LinkedListApp/ll_merge-wb.jpg)
 
 
 

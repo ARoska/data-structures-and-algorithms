@@ -97,7 +97,7 @@ namespace StacksAndQueuesTests
         }
 
         [Fact]
-        public void CanCreateEmptyQueue()
+        public void CanInstantiateEmptyQueue()
         {
             MyQueue<string> queue = new MyQueue<string>();
 
