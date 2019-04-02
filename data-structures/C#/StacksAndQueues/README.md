@@ -15,11 +15,11 @@ A C# implementation of a `Stacks and Queues`. A `Stack` refers to one or more `N
 | MyStack | Creates a new, empty `Stack` | O(1) | O(1) | new MyStack() |
 | Push | Adds a new `Node` to the top of the `Stack` | O(1) | O(1) | myStack.Push(`Node`) |
 | Pop | Removes the top `Node` of the `Stack`, returning the `Node's` data | O(1) | O(1) | myStack.Pop() |
-| MyQueue | Creates a new, empty `Queue` | O(1) | O(1) | new MyStack() |
-| Enque | Adds a new `Node` to the back of the `Queue` | O(1) | O(1) | myQueue.Enque(`Node`) |
+| Peek (Stack) | Returns the data of the top `Node` in the `Stack` while leaving the `Stack` intact.  Should always be used before using `Pop`. | O(1) | O(1) | myStack.Peek() |
+| MyQueue | Creates a new, empty `Queue` | O(1) | O(1) | new MyQueue() |
+| Enque | Adds a new `Node` to the rear of the `Queue` | O(1) | O(1) | myQueue.Enque(`Node`) |
 | Dequeue | Removes the front `Node` of the `Queue`, returning the `Node's` data | O(1) | O(1) | myQueue.Dequeue() |
-| Peek (Stack) | Returns the data of the top `Node` in the `Stack`.  Should always be used before using `Pop`. | O(1) | O(1) | myStack.Peek() |
-| Peek (Queue) | Returns the data of the front `Node` in the `Queue`.  Should always be used before using `Pop`. | O(1) | O(1) | myQueue.Peek() |
+| Peek (Queue) | Returns the data of the front `Node` in the `Queue` while leaving the `Queue` intact.  Should always be used before using `Dequeue`. | O(1) | O(1) | myQueue.Peek() |
 
 
 
