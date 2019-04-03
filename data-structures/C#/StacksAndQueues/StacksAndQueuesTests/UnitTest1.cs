@@ -10,7 +10,7 @@ namespace StacksAndQueuesTests
         public void CanInstantiateEmptyStack()
         {
             MyStack<string> stack = new MyStack<string>();
-            string blankTop = stack.Peek();
+            Node<string> blankTop = stack.Peek();
 
             Assert.Null(blankTop);
         }
@@ -22,9 +22,9 @@ namespace StacksAndQueuesTests
             Node<string> node1 = new Node<string>("One");
 
             stack.Push(node1);
-            string top = stack.Peek();
+            Node<string> top = stack.Peek();
 
-            Assert.Equal("One", top);
+            Assert.Equal("One", top.Value);
         }
 
         [Fact]
@@ -38,9 +38,9 @@ namespace StacksAndQueuesTests
             stack.Push(node1);
             stack.Push(node2);
             stack.Push(node3);
-            string top = stack.Peek();
+            Node<string> top = stack.Peek();
 
-            Assert.Equal("Three", top);
+            Assert.Equal("Three", top.Value);
         }
 
         [Fact]
@@ -55,9 +55,9 @@ namespace StacksAndQueuesTests
             stack.Push(node2);
             stack.Push(node3);
             stack.Pop();
-            string top = stack.Peek();
+            Node<string> top = stack.Peek();
 
-            Assert.Equal("Two", top);
+            Assert.Equal("Two", top.Value);
         }
 
         [Fact]
@@ -72,9 +72,9 @@ namespace StacksAndQueuesTests
             stack.Push(node2);
             stack.Push(node3);
             stack.Pop();
-            string pop = stack.Pop();
+            Node<string> pop = stack.Pop();
 
-            Assert.Equal("Two", pop);
+            Assert.Equal("Two", pop.Value);
         }
 
         [Fact]
@@ -91,7 +91,7 @@ namespace StacksAndQueuesTests
             stack.Pop();
             stack.Pop();
             stack.Pop();
-            string top = stack.Peek();
+            Node<string> top = stack.Peek();
 
             Assert.Null(top);
         }
@@ -101,7 +101,7 @@ namespace StacksAndQueuesTests
         {
             MyQueue<string> queue = new MyQueue<string>();
 
-            string emptyFront = queue.Peek();
+            Node<string> emptyFront = queue.Peek();
 
             Assert.Null(emptyFront);
         }
@@ -113,9 +113,9 @@ namespace StacksAndQueuesTests
             Node<string> node1 = new Node<string>("One");
 
             queue.Enqueue(node1);
-            string front = queue.Peek();
+            Node<string> front = queue.Peek();
 
-            Assert.Equal("One", front);
+            Assert.Equal("One", front.Value);
         }
 
         [Fact]
@@ -146,9 +146,9 @@ namespace StacksAndQueuesTests
             queue.Enqueue(node3);
             queue.Dequeue();
             queue.Dequeue();
-            string front = queue.Peek();
+            Node<string> front = queue.Peek();
 
-            Assert.Equal("Three", front);
+            Assert.Equal("Three", front.Value);
         }
 
         [Fact]
@@ -163,9 +163,9 @@ namespace StacksAndQueuesTests
             queue.Enqueue(node2);
             queue.Enqueue(node3);
             queue.Dequeue();
-            string dequeue = queue.Dequeue();
+            Node<string> dequeue = queue.Dequeue();
 
-            Assert.Equal("Two", dequeue);
+            Assert.Equal("Two", dequeue.Value);
         }
 
         [Fact]

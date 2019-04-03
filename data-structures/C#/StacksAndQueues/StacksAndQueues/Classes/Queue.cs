@@ -4,7 +4,7 @@ using System.Text;
 
 namespace StacksAndQueues.Classes
 {
-    public class MyQueue<T> where T : class
+    public class MyQueue<T> where T : IConvertible
     {
         /// <summary>
         /// Assigns Rear of Queue
@@ -43,29 +43,29 @@ namespace StacksAndQueues.Classes
         }
 
         /// <summary>
-        /// Removes the Front Node from the Queue, returning the data stored to be used if needed
+        /// Removes the Front Node from the Queue, returning the Node
         /// </summary>
-        /// <returns>Data from Node that is removed</returns>
-        public T Dequeue()
+        /// <returns>Node that is removed</returns>
+        public Node<T> Dequeue()
         {
-            T temp = Front.Value;
+            Node<T> temp = Front;
             Front = Front.Next;
             return temp;
         }
 
         /// <summary>
-        /// Checks the data in the Node at the Front of the Queue
+        /// Checks the Node at the Front of the Queue
         /// This should ALWAYS be used before using the Dequeue Method to ensure that there is an avaiable Node in the Queue
         /// </summary>
-        /// <returns>Data in Node at Front of Queue, or Null if no Node exists</returns>
-        public T Peek()
+        /// <returns>Node at Front of Queue, or Null if no Node exists</returns>
+        public Node<T> Peek()
         {
-            if (Front == null)
-            {
-                return null;
-            }
+            //if (Front == null)
+            //{
+            //    return null;
+            //}
 
-            return Front.Value;
+            return Front;
         }
     }
 }
