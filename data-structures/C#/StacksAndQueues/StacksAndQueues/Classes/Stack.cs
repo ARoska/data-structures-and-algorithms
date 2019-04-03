@@ -4,7 +4,7 @@ using System.Text;
 
 namespace StacksAndQueues.Classes
 {
-    public class MyStack<T> where T : class
+    public class MyStack<T> where T : IConvertible
     {
         /// <summary>
         /// Assigns Node to Top of Stack
@@ -30,29 +30,29 @@ namespace StacksAndQueues.Classes
         }
 
         /// <summary>
-        /// Removes the Top Node from the Stack, returning the data if needed
+        /// Removes the Top Node from the Stack, returning it
         /// </summary>
-        /// <returns>Data from Top Node</returns>
-        public T Pop()
+        /// <returns>Top Node</returns>
+        public Node<T> Pop()
         {
-            T temp = Top.Value;
+            Node<T> temp = Top;
             Top = Top.Next;
             return temp;
         }
 
         /// <summary>
-        /// Checks the data in the Node at the Top of the Stack
+        /// Checks the Node at the Top of the Stack
         /// This should ALWAYS be used before using the Pop Method to ensure that there is an avaiable Node on the Stack
         /// </summary>
-        /// <returns>Data in Node at Top of Stack, or Null if no Node exists</returns>
-        public T Peek()
+        /// <returns>Node at Top of Stack, or Null if no Node exists</returns>
+        public Node<T> Peek()
         {
-            if (Top == null)
-            {
-                return null;
-            }
+            //if (Top == null)
+            //{
+            //    return null;
+            //}
 
-            return Top.Value;
+            return Top;
         }
     }
 }

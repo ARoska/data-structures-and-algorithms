@@ -23,8 +23,8 @@ namespace StacksAndQueues
                 myStack.Push(node2);
                 myStack.Push(node3);
 
-                string val = myStack.Peek();
-                Console.WriteLine(val);
+                //string val = myStack.Peek();
+                //Console.WriteLine(val);
             }
             Console.WriteLine("==================");
             Console.ReadKey();
@@ -36,7 +36,7 @@ namespace StacksAndQueues
                 "==================");
 
             myStack.Push(node4);
-            string val = myStack.Peek();
+            Node<string> val = myStack.Peek();
 
             Console.WriteLine(val);
             Console.WriteLine("==================");

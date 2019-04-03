@@ -5,7 +5,7 @@ using System.Text;
 
 namespace QueueWithStacks.Classes
 {
-    public class MyPseudoQueue<T> where T : class
+    public class MyPseudoQueue<T> where T : IConvertible
     {
         public MyStack<T> StackOne { get; set; }
 
@@ -29,18 +29,16 @@ namespace QueueWithStacks.Classes
 
             while (StackOne.Top != null)
             {
-                T temp = StackOne.Pop();
-                Node<T> tempNode = new Node<T>(temp);
-                StackTwo.Push(tempNode);
+                Node<T> temp = StackOne.Pop();
+                StackTwo.Push(temp);
             }
 
             StackOne.Push(node);
 
             while (StackTwo.Top != null)
             {
-                T temp = StackTwo.Pop();
-                Node<T> tempNode = new Node<T>(temp);
-                StackOne.Push(tempNode);
+                Node<T> temp = StackTwo.Pop();
+                StackOne.Push(temp);
             }
         }
 
@@ -49,17 +47,16 @@ namespace QueueWithStacks.Classes
         /// via transferring data back and forth between the Stacks
         /// Removes the Node from the PseudoQueue
         /// </summary>
-        /// <returns>Data in the Node that is removed from the Front of the PseudoQueue</returns>
-        public T Dequeue()
+        /// <returns>Node that is removed from the Front of the PseudoQueue</returns>
+        public Node<T> Dequeue()
         {
-            T returnTemp = null;
+            Node<T> returnTemp = null;
             MyStack<T> StackTwo = new MyStack<T>();
 
             while (StackOne.Top != null)
             {
-                T temp = StackOne.Pop();
-                Node<T> tempNode = new Node<T>(temp);
-                StackTwo.Push(tempNode);
+                Node<T> temp = StackOne.Pop();
+                StackTwo.Push(temp);
             }
 
             if (StackTwo.Top != null)
@@ -69,9 +66,8 @@ namespace QueueWithStacks.Classes
 
             while (StackTwo.Top != null)
             {
-                T temp = StackTwo.Pop();
-                Node<T> tempNode = new Node<T>(temp);
-                StackOne.Push(tempNode);
+                Node<T> temp = StackTwo.Pop();
+                StackOne.Push(temp);
             }
 
             return returnTemp;
@@ -82,26 +78,24 @@ namespace QueueWithStacks.Classes
         /// via transferring data back and forth between the Stacks
         /// Does not add or remove any Nodes from the PseudoQueue
         /// </summary>
-        /// <returns>Data from the Node at the Front of the PseudoQueue</returns>
-        public T Peek()
+        /// <returns>Node at the Front of the PseudoQueue</returns>
+        public Node<T> Peek()
         {
-            T returnTemp = null;
+            Node<T> returnTemp = null;
             MyStack<T> StackTwo = new MyStack<T>();
 
             while (StackOne.Top != null)
             {
-                T temp = StackOne.Pop();
-                Node<T> tempNode = new Node<T>(temp);
-                StackTwo.Push(tempNode);
+                Node<T> temp = StackOne.Pop();
+                StackTwo.Push(temp);
             }
 
             returnTemp = StackTwo.Peek();
 
             while (StackTwo.Top != null)
             {
-                T temp = StackTwo.Pop();
-                Node<T> tempNode = new Node<T>(temp);
-                StackOne.Push(tempNode);
+                Node<T> temp = StackTwo.Pop();
+                StackOne.Push(temp);
             }
 
             return returnTemp;
