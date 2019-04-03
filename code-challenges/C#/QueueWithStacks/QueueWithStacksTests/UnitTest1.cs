@@ -23,7 +23,7 @@ namespace QueueWithStacksTests
 
             myPseudoQueue.Enqueue(node1);
 
-            Assert.Equal("One", myPseudoQueue.Peek());
+            Assert.Equal("One", myPseudoQueue.Peek().Value);
         }
 
         [Fact]
@@ -38,7 +38,7 @@ namespace QueueWithStacksTests
             myPseudoQueue.Enqueue(node2);
             myPseudoQueue.Enqueue(node3);
 
-            Assert.Equal("Three", myPseudoQueue.Peek());
+            Assert.Equal("Three", myPseudoQueue.Peek().Value);
         }
 
         [Fact]
@@ -54,7 +54,7 @@ namespace QueueWithStacksTests
             myPseudoQueue.Enqueue(node3);
             myPseudoQueue.Dequeue();
 
-            Assert.Equal("Two", myPseudoQueue.Peek());
+            Assert.Equal("Two", myPseudoQueue.Peek().Value);
         }
 
         [Fact]
@@ -71,7 +71,7 @@ namespace QueueWithStacksTests
             myPseudoQueue.Dequeue();
             myPseudoQueue.Dequeue();
 
-            Assert.Equal("One", myPseudoQueue.Peek());
+            Assert.Equal("One", myPseudoQueue.Peek().Value);
         }
 
         [Fact]
@@ -103,9 +103,9 @@ namespace QueueWithStacksTests
             myPseudoQueue.Enqueue(node1);
             myPseudoQueue.Enqueue(node2);
             myPseudoQueue.Enqueue(node3);
-            string recoveredData = myPseudoQueue.Dequeue();
+            Node<string> recoveredData = myPseudoQueue.Dequeue();
 
-            Assert.Equal("Three", recoveredData);
+            Assert.Equal("Three", recoveredData.Value);
         }
 
         [Fact]
@@ -116,7 +116,7 @@ namespace QueueWithStacksTests
 
             myPseudoQueue.Enqueue(node1);
             myPseudoQueue.Dequeue();
-            string recoveredData = myPseudoQueue.Dequeue();
+            Node<string> recoveredData = myPseudoQueue.Dequeue();
 
             Assert.Null(recoveredData);
         }
