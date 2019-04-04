@@ -22,7 +22,8 @@ A simple C# application that uses a `Stack` model to check any string for balanc
 
 ##### MultibracketValidation Method
 *Loops across the input `string` checking each individual `char`.  If the `char` in question is an opening bracket then it is pushed onto the `Stack`.  If the `char` is a closing bracket `Compare()` is invoked.  If `Compare()` ever retruns `false` the `string` is unbalanced and the Method returns `false`.  If the loop successfully traverses the `string` then the brackets are balanced and `true` is returned.*
-![MultiBracket Validation Demo](https://via.placeholder.com/750x500)
+
+![MultiBracket Validation Demo](https://github.com/Roketsu86/data-structures-and-algorithms/blob/master/assets/MultiBracketValidation/MultiBracketValidation%20-%20demo.jpg)
 
 ##### Compare Method
 *Helper Method called when a closing bracket is found.  Checks the current `Stack` to ensure that there is something on top, and if there is compares the top to the closing bracket that was passed in.  If the they match returns `true`, otherwise returns `false`.*
@@ -31,4 +32,4 @@ A simple C# application that uses a `Stack` model to check any string for balanc
 
 ## Change Log
 1.0: *Initial build* - 04 April 2019
-
+![Whiteboard](https://github.com/Roketsu86/data-structures-and-algorithms/blob/master/assets/MultiBracketValidation/MultiBracketValidation%20-%20wb.jpg)
