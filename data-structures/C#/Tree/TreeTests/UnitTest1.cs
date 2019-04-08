@@ -53,14 +53,6 @@ namespace TreeTests
         }
 
         [Fact]
-        public void CanCreateEmptySearchTree()
-        {
-            MyBinarySearchTree myTree = new MyBinarySearchTree();
-
-            Assert.Null(myTree.Root);
-        }
-
-        [Fact]
         public void CanRetrieveDataFromPreOrder()
         {
             Node<int> node1 = new Node<int>(1);
@@ -132,6 +124,67 @@ namespace TreeTests
             Assert.Equal(expected, tree.PostOrder(node1, input));
         }
 
+        [Fact]
+        public void CanCreateEmptySearchTree()
+        {
+            MyBinarySearchTree tree = new MyBinarySearchTree();
+
+            Assert.Null(tree.Root);
+        }
+
+        [Fact]
+        public void CanFindValueInSearchTree()
+        {
+            Node<int> node1 = new Node<int>(10);
+            Node<int> node2 = new Node<int>(20);
+            Node<int> node3 = new Node<int>(30);
+            Node<int> node4 = new Node<int>(40);
+            Node<int> node5 = new Node<int>(50);
+            Node<int> node6 = new Node<int>(9);
+            Node<int> node7 = new Node<int>(8);
+            Node<int> node8 = new Node<int>(7);
+            Node<int> node9 = new Node<int>(6);
+            MyBinarySearchTree tree = new MyBinarySearchTree();
+
+            tree.Add(node1);
+            tree.Add(node2);
+            tree.Add(node3);
+            tree.Add(node4);
+            tree.Add(node5);
+            tree.Add(node6);
+            tree.Add(node7);
+            tree.Add(node8);
+            tree.Add(node9);
+
+            Assert.True(tree.Contains(node1, 50));
+        }
+
+        [Fact]
+        public void FalseIfValueNotInSearchTree()
+        {
+            Node<int> node1 = new Node<int>(10);
+            Node<int> node2 = new Node<int>(20);
+            Node<int> node3 = new Node<int>(30);
+            Node<int> node4 = new Node<int>(40);
+            Node<int> node5 = new Node<int>(50);
+            Node<int> node6 = new Node<int>(9);
+            Node<int> node7 = new Node<int>(8);
+            Node<int> node8 = new Node<int>(7);
+            Node<int> node9 = new Node<int>(6);
+            MyBinarySearchTree tree = new MyBinarySearchTree();
+
+            tree.Add(node1);
+            tree.Add(node2);
+            tree.Add(node3);
+            tree.Add(node4);
+            tree.Add(node5);
+            tree.Add(node6);
+            tree.Add(node7);
+            tree.Add(node8);
+            tree.Add(node9);
+
+            Assert.False(tree.Contains(node1, 47));
+        }
 
     }
 }

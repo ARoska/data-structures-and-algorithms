@@ -20,10 +20,12 @@ namespace Tree.Classes
             if (Root == null)
             {
                 Root = node;
+                Current = Root;
                 return;
             }
 
-            if (Current.Value >= node.Value)
+
+            if (node.Value >= Current.Value)
             {
                 if (Current.RChild == null)
                 {
@@ -47,12 +49,39 @@ namespace Tree.Classes
                     Add(node);
                 }
             }
+
+            Current = Root;
         }
 
-        //public static bool Contains(int value)
-        //{
+        public bool Contains(Node<int> root, int value)
+        {
+            if (root == null)
+            {
+                return false;
+            }
 
-        //}
+            if (root.Value == value)
+            {
+                return true;
+            }
+
+            if (value >= root.Value)
+            {
+                if (Contains(root.RChild, value))
+                {
+                    return true;
+                }
+            }
+            if (value < root.Value)
+            {
+                if (Contains(root.LChild, value))
+                {
+                    return true;
+                }
+            }
+
+            return false;
+        }
 
     }
 }
