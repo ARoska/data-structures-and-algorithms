@@ -10,12 +10,20 @@ A `Binary Search Tree` is a `Binary Tree` with a special rule on how `Nodes` are
 
 ------------------------------
 
-## Methods
+## Binary Tree Methods
 
 | Method | Summary | Big O Time | Big O Space | Example | 
 | :----------- | :----------- | :-------------: | :-------------: | :----------- |
-| Insert | Adds a new `Node` to the `Tree` | O(1) | O(1) | myTree.Insert(99) |
+| PreOrder | Returns a list of all `Nodes` in `Root` first order | O(n) | O(h) h = call stack height | myTree.PreOrder(Root Node, Empty List) |
+| InOrder | Returns a list of all `Nodes` in `Left Child` first order | O(n) | O(h) h = call stack height | myTree.InOrder(Root Node, Empty List) |
+| PostOrder | Returns a list of all `Nodes` in `Left Child` and `Right Child` first order | O(n) | O(h) h = call stack height | myTree.PostOrder(Root Node, Empty List) |
 
+## Binary Search Tree Methods
+
+| Method | Summary | Big O Time | Big O Space | Example | 
+| :----------- | :----------- | :-------------: | :-------------: | :----------- |
+| Add | Adds a `Node` to the `BST` based on how large it is | O(log n) | O(h) h = call stack height | myTree.Add(Node) |
+| Contains | Returns `True` if the value is in the `BST` | O(log n) | O(h) h = call stack height | myTree.Contains(value) |
 
 ------------------------------
 
