@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Tree.Classes
 {
-    class Node<T> where T : IConvertible
+    public class Node<T> where T : IConvertible
     {
         public T Value { get; set; }
         public Node<T> LChild { get; set; }

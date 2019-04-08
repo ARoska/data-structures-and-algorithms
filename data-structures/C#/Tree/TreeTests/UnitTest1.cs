@@ -1,5 +1,6 @@
 using System;
 using Xunit;
+using Tree.Classes;
 
 namespace TreeTests
 {
@@ -8,63 +9,63 @@ namespace TreeTests
         [Fact]
         public void CanCreateEmptyTree()
         {
+            MyBinaryTree<int> myTree = new MyBinaryTree<int>();
 
-
-            Assert.Null(tree);
+            Assert.Null(myTree.Root);
         }
 
-        [Fact]
+        //[Fact]
         public void CanCreateTreeWithOneRoot()
         {
 
 
-            Assert.Equal("root", root);
+            //Assert.Equal("root", root);
         }
 
-        [Fact]
+        //[Fact]
         public void CanAddLeftChild()
         {
 
 
-            Assert.Equal("left", left);
+            //Assert.Equal("left", left);
         }
 
-        [Fact]
+        //[Fact]
         public void CanAddRightChild()
         {
 
 
-            Assert.Equal("right", right);
+            //Assert.Equal("right", right);
         }
 
-        [Fact]
+        //[Fact]
         public void CanRetrieveDataFromPreOrder()
         {
 
 
             int[] expected = new int[] { 1, 2, 3 };
 
-            Assert.Equal(expected, actual);
+            //Assert.Equal(expected, actual);
         }
 
-        [Fact]
+        //[Fact]
         public void CanRetrieveDataFromInOrder()
         {
 
 
             int[] expected = new int[] { 1, 2, 3 };
 
-            Assert.Equal(expected, actual);
+            //Assert.Equal(expected, actual);
         }
 
-        [Fact]
+        //[Fact]
         public void CanRetrieveDataFromPostOrder()
         {
 
 
             int[] expected = new int[] { 1, 2, 3 };
 
-            Assert.Equal(expected, actual);
+            //Assert.Equal(expected, actual);
         }
 
 
