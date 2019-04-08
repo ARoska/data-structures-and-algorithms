@@ -3,14 +3,14 @@ using Tree.Classes;
 
 namespace FizzBuzzTree
 {
-    class Program
+    public class Program
     {
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
         }
 
-        public static MyBinaryTree<object> FuzzBuzz(MyBinaryTree<object> tree)
+        public static MyBinaryTree<object> FizzBuzz(MyBinaryTree<object> tree)
         {
             PreOrderMod(tree.Root);
             return tree;
@@ -20,11 +20,16 @@ namespace FizzBuzzTree
         {
             if (root != null)
             {
-                int value = (int)root.Value;
-                if ((value % 3 == 0) && (value % 5 == 0))
+                int value = 0;
+                try
                 {
-                    root.Value = "FizzBuzz";
+                    value = (int)root.Value;
                 }
+                catch (Exception)
+                {
+                    value = -1;
+                }
+
                 if (value % 3 == 0)
                 {
                     root.Value = "Fizz";
@@ -32,6 +37,10 @@ namespace FizzBuzzTree
                 if (value % 5 == 0)
                 {
                     root.Value = "Buzz";
+                }
+                if ((value % 3 == 0) && (value % 5 == 0))
+                {
+                    root.Value = "FizzBuzz";
                 }
 
                 if (root.LChild != null)
