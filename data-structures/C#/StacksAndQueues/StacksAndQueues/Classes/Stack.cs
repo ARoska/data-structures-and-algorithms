@@ -4,7 +4,7 @@ using System.Text;
 
 namespace StacksAndQueues.Classes
 {
-    public class MyStack<T> where T : IConvertible
+    public class MyStack<T>
     {
         /// <summary>
         /// Assigns Node to Top of Stack

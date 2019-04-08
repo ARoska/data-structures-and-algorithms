@@ -4,7 +4,7 @@ using System.Text;
 
 namespace StacksAndQueues.Classes
 {
-    public class MyQueue<T> where T : IConvertible
+    public class MyQueue<T>
     {
         /// <summary>
         /// Assigns Rear of Queue

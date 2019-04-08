@@ -4,7 +4,7 @@ using System.Text;
 
 namespace StacksAndQueues.Classes
 {
-    public class Node<T> where T : IConvertible
+    public class Node<T>
     {
         public Node<T> Next { get; set; }
 
