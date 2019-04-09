@@ -4,7 +4,7 @@
 ------------------------------
 
 ## Description
-Create a class called AnimalShelter which holds only dogs and cats. The shelter operates using a first-in, first-out approach. If a cat or dog isn’t preferred, return whichever animal has been waiting in the shelter the longest.
+Create a class called AnimalShelter which holds only dogs and cats. The shelter operates using a first-in, first-out approach. If a cat or dog isnâ€™t preferred, return whichever animal has been waiting in the shelter the longest.
 
 ------------------------------
 
@@ -20,4 +20,5 @@ Create a class called AnimalShelter which holds only dogs and cats. The shelter 
 
 ## Change Log
 1.0: *Implements the AnimalShelter Class* - 02 April 2019
-![Animal Shelter Whiteboard]()
+
+![Animal Shelter Whiteboard](https://github.com/Roketsu86/data-structures-and-algorithms/blob/master/assets/FIFOAnimalShelter/FIFOAnimalShelter-wb.jpg)
