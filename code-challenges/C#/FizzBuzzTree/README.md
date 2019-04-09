@@ -26,6 +26,6 @@ The modified `Binary Tree` is then returned to the user.
 ## Change Log
 1.0: *Initial Build* - 09 April 019
 
-![FizzBuzzTree Whiteboard]()
+![FizzBuzzTree Whiteboard](https://github.com/Roketsu86/data-structures-and-algorithms/blob/master/assets/FizzBuzzTree/FizzBuzzTree-WB.jpg)
 
 ------------------------------
