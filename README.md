@@ -15,6 +15,8 @@
 
 * [Multi-Bracket Validation](https://github.com/Roketsu86/data-structures-and-algorithms/tree/master/code-challenges/C%23/MultiBracketValidation)
 
+* [FizzBuzzTree](https://github.com/Roketsu86/data-structures-and-algorithms/tree/master/code-challenges/C%23/FizzBuzzTree)
+
 * [Binary Search](https://github.com/Roketsu86/data-structures-and-algorithms/tree/master/code-challenges/C%23/BinarySearch)
 
 #### C#/.NET Core - Data Structures
@@ -22,6 +24,8 @@
 * [Linked Lists](https://github.com/Roketsu86/data-structures-and-algorithms/tree/master/data-structures/C%23/LinkedListApp)
 
 * [Stacks and Queues](https://github.com/Roketsu86/data-structures-and-algorithms/tree/master/data-structures/C%23/StacksAndQueues)
+
+* [Binary Tree and Binary Search Tree](https://github.com/Roketsu86/data-structures-and-algorithms/tree/master/data-structures/C%23/Tree)
 
 #### JavaScript - Challenges
 
