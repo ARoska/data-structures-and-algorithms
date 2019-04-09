@@ -76,7 +76,7 @@ namespace TreeTests
             Assert.Equal(expected, tree.PreOrder(node1, input));
         }
 
-        //[Fact]
+        [Fact]
         public void CanRetrieveDataFromInOrder()
         {
             Node<int> node1 = new Node<int>(1);
@@ -95,7 +95,7 @@ namespace TreeTests
             tree.Root.RChild.LChild = node6;
 
             List<int> input = new List<int>();
-            List<int> expected = new List<int> { 4, 2, 5, 1, 3, 6 };
+            List<int> expected = new List<int> { 4, 2, 5, 1, 6, 3 };
 
             Assert.Equal(expected, tree.InOrder(node1, input));
         }
