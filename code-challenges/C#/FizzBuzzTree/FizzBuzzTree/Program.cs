@@ -12,8 +12,13 @@ namespace FizzBuzzTree
 
         public static MyBinaryTree<object> FizzBuzz(MyBinaryTree<object> tree)
         {
-            PreOrderMod(tree.Root);
-            return tree;
+            if (tree.Root != null)
+            {
+                PreOrderMod(tree.Root);
+                return tree; 
+            }
+
+            return null;
         }
 
         public static void PreOrderMod(Node<object> root)

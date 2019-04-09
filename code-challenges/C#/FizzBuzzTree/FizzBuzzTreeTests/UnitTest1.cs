@@ -68,5 +68,12 @@ namespace FizzBuzzTreeTests
             Assert.Equal(expectedList, actualList);
         }
 
+        [Fact]
+        public void WillReturnNullWhenNoNodesInTree()
+        {
+            MyBinaryTree<object> tree = new MyBinaryTree<object>();
+
+            Assert.Null(FizzBuzz(tree));
+        }
     }
 }
