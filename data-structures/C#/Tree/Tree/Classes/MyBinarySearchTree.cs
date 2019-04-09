@@ -9,12 +9,19 @@ namespace Tree.Classes
         public Node<int> Root { get; set; }
         public Node<int> Current { get; set; }
 
+        /// <summary>
+        /// Creates an empty Binary Search Tree
+        /// </summary>
         public MyBinarySearchTree()
         {
             Root = null;
             Current = Root;
         }
 
+        /// <summary>
+        /// Adds a Node to the BST based on it's value
+        /// </summary>
+        /// <param name="node">Node to be added</param>
         public void Add(Node<int> node)
         {
             if (Root == null)
@@ -53,6 +60,12 @@ namespace Tree.Classes
             Current = Root;
         }
 
+        /// <summary>
+        /// Checks the BST to determine if the requested value is present
+        /// </summary>
+        /// <param name="root">Root Node to start search at</param>
+        /// <param name="value">Value to search for</param>
+        /// <returns>True if value is present</returns>
         public bool Contains(Node<int> root, int value)
         {
             if (root == null)

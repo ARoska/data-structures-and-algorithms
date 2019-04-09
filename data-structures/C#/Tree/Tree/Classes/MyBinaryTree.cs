@@ -10,11 +10,20 @@ namespace Tree.Classes
         public Node<T> Root { get; set; }
         public Node<T> Current { get; set; }
 
+        /// <summary>
+        /// Creates empty Binary Tree
+        /// </summary>
         public MyBinaryTree()
         {
             Root = null;
         }
 
+        /// <summary>
+        /// Takes in a Root Node and a List, and adds each Node in the BT to the List in a Root-first order
+        /// </summary>
+        /// <param name="root">Node to start at, the "Root"</param>
+        /// <param name="list">Empty List to populate</param>
+        /// <returns>List populated with all Nodes in BT</returns>
         public List<T> PreOrder(Node<T> root, List<T> list)
         {
             if (root == null)
@@ -36,6 +45,12 @@ namespace Tree.Classes
             return list;
         }
 
+        /// <summary>
+        /// Takes in a Root Node and a List, and adds each Node in the BT to the List in a Root-between order
+        /// </summary>
+        /// <param name="root">Node to start at, the "Root"</param>
+        /// <param name="list">Empty List to populate</param>
+        /// <returns>List populated with all Nodes in BT</returns>
         public List<T> InOrder(Node<T> root, List<T> list)
         {
             if (root == null)
@@ -57,6 +72,12 @@ namespace Tree.Classes
             return list;
         }
 
+        /// <summary>
+        /// Takes in a Root Node and a List, and adds each Node in the BT to the List in a Root-last order
+        /// </summary>
+        /// <param name="root">Node to start at, the "Root"</param>
+        /// <param name="list">Empty List to populate</param>
+        /// <returns>List populated with all Nodes in BT</returns>
         public List<T> PostOrder(Node<T> root, List<T> list)
         {
             if (root == null)
@@ -79,23 +100,61 @@ namespace Tree.Classes
         }
 
 
-        //public void AddToBT(T root, T node)
-        //{
-        //    Queue<T> queue = new Queue<T>();
-        //    queue.Enqueue(root);
+        public List<Node<T>> BreadthFirst()
+        {
+            List<Node<T>> list = new List<Node<T>>();
+            Queue<Node<T>> queue = new Queue<Node<T>>();
+            queue.Enqueue(Root);
 
-        //    while (queue.Peek() != null)
-        //    {
-        //        Node<T> temp = new Node<T>();
-        //        T front = queue.Dequeue();
-        //        temp.Value = front;
-        //        if (front.)
-        //        {
+            while (queue.Peek() != null)
+            {
+                Node<T> node = queue.Dequeue();
+                list.Add(node);
+                Console.WriteLine(node.Value);
 
-        //        }
-        //    }
+                if (node.LChild != null)
+                {
+                    queue.Enqueue(node.LChild);
+                }
+                if (node.RChild != null)
+                {
+                    queue.Enqueue(node.RChild);
+                }
+            }
 
+            return list;
+        }
 
-        //}
+        public void AddToBT(Node<T> node)
+        {
+            Queue<Node<T>> queue = new Queue<Node<T>>();
+            queue.Enqueue(Root);
+
+            while (queue.Peek() != null)
+            {
+                Node<T> temp = queue.Dequeue();
+
+                if (temp.LChild != null)
+                {
+                    queue.Enqueue(temp.LChild);
+                }
+                else
+                {
+                    temp.LChild = node;
+                    return;
+                }
+
+                if (temp.RChild != null)
+                {
+                    queue.Enqueue(temp.RChild);
+                }
+                else
+                {
+                    temp.RChild = node;
+                    return;
+                }
+            }
+
+        }
     }
 }
