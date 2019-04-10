@@ -14,6 +14,8 @@ A `Binary Search Tree` is a `Binary Tree` with a special rule on how `Nodes` are
 
 | Method | Summary | Big O Time | Big O Space | Example | 
 | :----------- | :----------- | :-------------: | :-------------: | :----------- |
+| Add | Adds a new `Node` to the `Binary Tree` in a top-to-bottom, left-to-right approach | O(n) | O(w) w = width of the `Tree` | myTree.Add(Node) |
+| BreadthFirst | Traverses the `Binary Tree` in a top-to-bottom, left-to-right approach, printing and returning a `List` of all values | O(n) | O(w) w = width of the `Tree` | myTree.BreadthFirst() |
 | PreOrder | Returns a list of all `Nodes` in `Root` first order | O(n) | O(h) h = call stack height | myTree.PreOrder(Root Node, Empty List) |
 | InOrder | Returns a list of all `Nodes` in `Left Child` first order | O(n) | O(h) h = call stack height | myTree.InOrder(Root Node, Empty List) |
 | PostOrder | Returns a list of all `Nodes` in `Left Child` and `Right Child` first order | O(n) | O(h) h = call stack height | myTree.PostOrder(Root Node, Empty List) |
@@ -29,10 +31,12 @@ A `Binary Search Tree` is a `Binary Tree` with a special rule on how `Nodes` are
 
 ## Visuals
 
-##### Insert Method
-![Image 1](https://via.placeholder.com/750x500)
+##### Breadth First Whiteboard
+![Breadth First Whiteboard](https://github.com/Roketsu86/data-structures-and-algorithms/blob/master/assets/Tree/BreadthFirst-WB.jpg)
 
 ------------------------------
 
 ## Change Log
+1.1: *Adds Breadth First Add and Traversal Methods* - 10 April 2019
+
 1.0: *Initialization* - 08 April 2019

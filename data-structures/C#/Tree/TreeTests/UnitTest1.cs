@@ -125,6 +125,54 @@ namespace TreeTests
         }
 
         [Fact]
+        public void CanAddToBTWithBreadthTraversal()
+        {
+            Node<int> node1 = new Node<int>(1);
+            Node<int> node2 = new Node<int>(2);
+            Node<int> node3 = new Node<int>(3);
+            Node<int> node4 = new Node<int>(4);
+            Node<int> node5 = new Node<int>(5);
+            Node<int> node6 = new Node<int>(6);
+            MyBinaryTree<int> tree = new MyBinaryTree<int>();
+
+            tree.Add(node1);
+            tree.Add(node2);
+            tree.Add(node3);
+            tree.Add(node4);
+            tree.Add(node5);
+            tree.Add(node6);
+
+            List<int> input = new List<int>();
+            List<int> expected = new List<int> { 1, 2, 4, 5, 3, 6 };
+
+            Assert.Equal(expected, tree.PreOrder(node1, input));
+        }
+
+        [Fact]
+        public void CanBreadthTraverseBT()
+        {
+            Node<object> node1 = new Node<object>(1);
+            Node<object> node2 = new Node<object>(2);
+            Node<object> node3 = new Node<object>(3);
+            Node<object> node4 = new Node<object>(4);
+            Node<object> node5 = new Node<object>(5);
+            Node<object> node6 = new Node<object>(6);
+            MyBinaryTree<object> tree = new MyBinaryTree<object>();
+
+            tree.Add(node1);
+            tree.Add(node2);
+            tree.Add(node3);
+            tree.Add(node4);
+            tree.Add(node5);
+            tree.Add(node6);
+
+            List<object> expected = new List<object> { 1, 2, 3, 4, 5, 6 };
+            List<object> actual = tree.BreadthFirst();
+
+            Assert.Equal(expected, actual);
+        }
+
+        [Fact]
         public void CanCreateEmptySearchTree()
         {
             MyBinarySearchTree tree = new MyBinarySearchTree();
