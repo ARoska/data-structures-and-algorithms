@@ -100,16 +100,23 @@ namespace Tree.Classes
         }
 
 
-        public List<Node<T>> BreadthFirst()
+        public List<object> BreadthFirst()
         {
+            if (Root == null)
+            {
+                return null;
+            }
+
             List<Node<T>> list = new List<Node<T>>();
+            List<object> returnList = new List<object>();
             Queue<Node<T>> queue = new Queue<Node<T>>();
             queue.Enqueue(Root);
-
-            while (queue.Peek() != null)
+            
+            while (queue.Count != 0)
             {
                 Node<T> node = queue.Dequeue();
                 list.Add(node);
+                returnList.Add(node.Value);
                 Console.WriteLine(node.Value);
 
                 if (node.LChild != null)
@@ -122,15 +129,20 @@ namespace Tree.Classes
                 }
             }
 
-            return list;
+            return returnList;
         }
 
         public void AddToBT(Node<T> node)
         {
+            if (Root == null)
+            {
+                Root = node;
+                return;
+            }
             Queue<Node<T>> queue = new Queue<Node<T>>();
             queue.Enqueue(Root);
 
-            while (queue.Peek() != null)
+            while (queue.Count != 0)
             {
                 Node<T> temp = queue.Dequeue();
 
