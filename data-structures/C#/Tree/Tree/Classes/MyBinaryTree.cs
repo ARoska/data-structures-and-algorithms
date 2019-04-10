@@ -132,7 +132,7 @@ namespace Tree.Classes
             return returnList;
         }
 
-        public void AddToBT(Node<T> node)
+        public void Add(Node<T> node)
         {
             if (Root == null)
             {

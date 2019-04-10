@@ -135,12 +135,12 @@ namespace TreeTests
             Node<int> node6 = new Node<int>(6);
             MyBinaryTree<int> tree = new MyBinaryTree<int>();
 
-            tree.AddToBT(node1);
-            tree.AddToBT(node2);
-            tree.AddToBT(node3);
-            tree.AddToBT(node4);
-            tree.AddToBT(node5);
-            tree.AddToBT(node6);
+            tree.Add(node1);
+            tree.Add(node2);
+            tree.Add(node3);
+            tree.Add(node4);
+            tree.Add(node5);
+            tree.Add(node6);
 
             List<int> input = new List<int>();
             List<int> expected = new List<int> { 1, 2, 4, 5, 3, 6 };
@@ -159,12 +159,12 @@ namespace TreeTests
             Node<object> node6 = new Node<object>(6);
             MyBinaryTree<object> tree = new MyBinaryTree<object>();
 
-            tree.AddToBT(node1);
-            tree.AddToBT(node2);
-            tree.AddToBT(node3);
-            tree.AddToBT(node4);
-            tree.AddToBT(node5);
-            tree.AddToBT(node6);
+            tree.Add(node1);
+            tree.Add(node2);
+            tree.Add(node3);
+            tree.Add(node4);
+            tree.Add(node5);
+            tree.Add(node6);
 
             List<object> expected = new List<object> { 1, 2, 3, 4, 5, 6 };
             List<object> actual = tree.BreadthFirst();
