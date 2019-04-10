@@ -4,7 +4,7 @@
 ------------------------------
 
 ## Description
-A simple method that takes in a `Binary Tree` with `int` values and returns the largest value in the the `BT`.  The `BT` is traversed with a breadth-first approach.
+A simple method that takes in a `Binary Tree` returns the largest `int` value in the the `BT`.  The `BT` is traversed with a breadth-first approach.  If no `int` values are found, returns `null`.
 
 ------------------------------
 
@@ -12,7 +12,7 @@ A simple method that takes in a `Binary Tree` with `int` values and returns the 
 
 | Method | Summary | Big O Time | Big O Space | Example | 
 | :----------- | :----------- | :-------------: | :-------------: | :----------- |
-| FindMaximumValue | Returns the larges `int` in the `BT` | O(n) | O(w) w = width of the `BT` | myTree.FindMaximumValue() |
+| FindMaximumValue | Returns the larges `int` in the `BT` or `null` if no `int` values are present | O(n) | O(w) w = width of the `BT` | myTree.FindMaximumValue() |
 
 
 ------------------------------

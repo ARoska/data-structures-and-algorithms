@@ -11,16 +11,30 @@ namespace FindMaximumBinaryTree
             Console.WriteLine("Hello World!");
         }
 
-        public static int FindMaximumValue(MyBinaryTree<int> tree)
+        public static int? FindMaximumValue(MyBinaryTree<object> tree)
         {
+            bool hasNumbers = false;
             int maxValue = 0;
-            Queue<Node<int>> queue = new Queue<Node<int>>();
+            Queue<Node<object>> queue = new Queue<Node<object>>();
             queue.Enqueue(tree.Root);
 
             while (queue.Count != 0)
             {
-                Node<int> temp = queue.Dequeue();
+                Node<object> temp = queue.Dequeue();
+                int tempValue = 0;
+                try
+                {
+                    tempValue = (int)temp.Value;
+                }
+                catch (Exception)
+                {
+                }
 
+                if (maxValue < tempValue)
+                {
+                    maxValue = tempValue;
+                    hasNumbers = true;
+                }
                 if (temp.LChild != null)
                 {
                     queue.Enqueue(temp.LChild);
@@ -29,13 +43,16 @@ namespace FindMaximumBinaryTree
                 {
                     queue.Enqueue(temp.RChild);
                 }
-                if (temp.Value > maxValue)
-                {
-                    maxValue = temp.Value;
-                }
             }
 
-            return maxValue;
+            if (hasNumbers)
+            {
+                return maxValue;
+            }
+            else
+            {
+                return null;
+            }
         }
     }
 }
