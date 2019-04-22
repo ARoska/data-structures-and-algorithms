@@ -9,6 +9,11 @@ namespace Sorts
             Console.WriteLine("Hello World!");
         }
 
+        /// <summary>
+        /// Basic sorting method that traverses an array and sorts smaller values back towards the front.
+        /// </summary>
+        /// <param name="arr">Int Array to sort.</param>
+        /// <returns>Sorted int Array.</returns>
         public static int[] InsertionSort(int[] arr)
         {
             for (int i = 1; i < arr.Length; i++)
