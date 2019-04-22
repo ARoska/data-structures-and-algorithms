@@ -1,5 +1,6 @@
 using System;
 using Xunit;
+using static Sorts.Program;
 
 namespace SortsTests
 {
@@ -12,7 +13,7 @@ namespace SortsTests
 
             int[] expectedArr = new int[] { -1, 1, 5, 32, 64, 75 };
 
-            int[] sortedArr = new int[6];
+            int[] sortedArr = InsertionSort(unsortedArr);
 
             Assert.Equal(expectedArr, sortedArr);
         }
@@ -24,7 +25,7 @@ namespace SortsTests
 
             int[] expectedArr = new int[] { -1, 1, 5, 32, 64, 75 };
 
-            int[] sortedArr = new int[6];
+            int[] sortedArr = InsertionSort(unsortedArr);
 
             Assert.Equal(expectedArr, sortedArr);
         }
@@ -36,7 +37,7 @@ namespace SortsTests
 
             int[] expectedArr = new int[] { -1, 1, 5, 32, 64, 75 };
 
-            int[] sortedArr = new int[6];
+            int[] sortedArr = InsertionSort(unsortedArr);
 
             Assert.Equal(expectedArr, sortedArr);
         }
@@ -48,7 +49,7 @@ namespace SortsTests
 
             int[] expectedArr = new int[] { };
 
-            int[] sortedArr = new int[6];
+            int[] sortedArr = InsertionSort(unsortedArr);
 
             Assert.Equal(expectedArr, sortedArr);
         }
@@ -60,7 +61,7 @@ namespace SortsTests
 
             int[] expectedArr = new int[] { 5 };
 
-            int[] sortedArr = new int[1];
+            int[] sortedArr = InsertionSort(unsortedArr);
 
             Assert.Equal(expectedArr, sortedArr);
         }
