@@ -30,7 +30,7 @@ namespace Hashtable.Classes
         /// </summary>
         /// <param name="key">Key string.</param>
         /// <returns>Hash Key.</returns>
-        private int Hash(string key)
+        public int Hash(string key)
         {
             int hash = 0;
             char[] charArr = key.ToCharArray();
