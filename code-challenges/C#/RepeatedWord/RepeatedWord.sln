@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.489
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RepeatedWord", "RepeatedWord\RepeatedWord.csproj", "{A1C4684C-0538-45CD-9765-2EB81A2F94CE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RepeatedWordTests", "RepeatedWordTests\RepeatedWordTests.csproj", "{3D40B714-4404-4EF1-B287-02D211C05B1F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A1C4684C-0538-45CD-9765-2EB81A2F94CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A1C4684C-0538-45CD-9765-2EB81A2F94CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A1C4684C-0538-45CD-9765-2EB81A2F94CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A1C4684C-0538-45CD-9765-2EB81A2F94CE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3D40B714-4404-4EF1-B287-02D211C05B1F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D40B714-4404-4EF1-B287-02D211C05B1F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D40B714-4404-4EF1-B287-02D211C05B1F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D40B714-4404-4EF1-B287-02D211C05B1F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {55284834-AEBA-4D71-948D-9A49BD4F75C3}
+	EndGlobalSection
+EndGlobal
