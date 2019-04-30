@@ -19,7 +19,7 @@ This challenge is to take in a lengthy string, typically one or mor paragraphs, 
 
 ## Visuals
 
-![Repeated Word Whiteboard](https://via.placeholder.com/750x500)
+![Repeated Word Whiteboard](https://github.com/ARoska/data-structures-and-algorithms/blob/master/assets/RepeatedWord/RepeatedWord%20WB.jpg)
 
 ## Change Log
 1.0: *First build* - 30 April 2019
