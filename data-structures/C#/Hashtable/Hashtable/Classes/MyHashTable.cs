@@ -61,7 +61,29 @@ namespace Hashtable.Classes
         }
 
         /// <summary>
-        /// Takes in a Key string and returns the Key:Value pair from the HashTable as dermined by the Hash algorythm.
+        /// Takes in a Key string and a Value string and removes that pair from the HashTable, if present.
+        /// </summary>
+        /// <param name="key">Key string to be searched for.</param>
+        /// <param name="value">Value string to be searched for.</param>
+        public void Remove(string key, string value)
+        {
+            int hashKey = Hash(key);
+
+            if (Map[hashKey] != null)
+            {
+                foreach (var item in Map[hashKey])
+                {
+                    if (item.Key == key && item.Value == value)
+                    {
+                        Map[hashKey].Remove(item);
+                        return;
+                    }
+                }
+            }
+        }
+
+        /// <summary>
+        /// Takes in a Key string and returns the Key:Value pair from the HashTable as dermined by the Hash algorythm.  In the event that there is a collision in the HashTable, the first pair is returned.
         /// </summary>
         /// <param name="key">Key string.</param>
         /// <returns>Node containing Key:Value pair.</returns>
@@ -97,6 +119,30 @@ namespace Hashtable.Classes
                 foreach (var item in Map[hashKey])
                 {
                     if (item.Key == key)
+                    {
+                        return true;
+                    }
+                }
+            }
+
+            return false;
+        }
+
+        /// <summary>
+        /// Takes in a Key:Value pair and returns true if that pair exists in the HashTable.
+        /// </summary>
+        /// <param name="key">Key string to search for.</param>
+        /// <param name="value">Value string to search for.</param>
+        /// <returns>True if Key:Value pair exists in HashTable.</returns>
+        public bool ContainsUnique(string key, string value)
+        {
+            int hashKey = Hash(key);
+
+            if (Map[hashKey] != null)
+            {
+                foreach (var item in Map[hashKey])
+                {
+                    if (item.Key == key && item.Value == value)
                     {
                         return true;
                     }
