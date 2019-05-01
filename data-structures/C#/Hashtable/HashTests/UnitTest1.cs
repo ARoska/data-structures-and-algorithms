@@ -60,5 +60,28 @@ namespace HashTests
             Assert.Equal("testTwo", resultNode.Value);
         }
 
+        [Fact]
+        public void CanRemoveValueFromHashTable()
+        {
+            MyHashTable hashTable = new MyHashTable();
+            hashTable.Add("test", "test");
+
+            hashTable.Remove("test", "test");
+
+            Assert.False(hashTable.Contains("test"));
+        }
+
+        [Fact]
+        public void CanRemoveValueFromHashTableWithCollisions()
+        {
+            MyHashTable hashTable = new MyHashTable();
+            hashTable.Add("test", "testOne");
+            hashTable.Add("test", "testTwo");
+
+            hashTable.Remove("test", "testOne");
+
+            Assert.False(hashTable.ContainsUnique("test", "testOne"));
+        }
+
     }
 }

@@ -16,13 +16,16 @@ If the `Hashing` algorithm is not a `Perfect Hash` then it is possible to ge
 | :----------- | :----------- | :-------------: | :-------------: | :----------- |
 | Hash | Hashes the given Key string | O(1) | O(1) | myHashTable.Hash(Key) |
 | Add | Adds the Key:Value string pair to the HashTable based on thier Key | O(1) | O(1) | myHashTable.Add(Key, Value) |
+| Remove | Removes the Key:Value string pair from the HashTable based on thier Key | O(n) | O(1) | myHashTable.Remove(Key, Value) |
 | Get | Returns the Key:Value string pair based on the input Key | O(n) | O(1) | myHashTable.Get(Key) |
 | Contains | Returns true if at least one Key:Value pair exists at Key | O(1) | O(1) | myHashTable.Contains(Key) |
+| ContainsUnique | Returns true if Key:Value is found in HashTable | O(n) | O(1) | myHashTable.ContainsUnique(Key, Value) |
 
 
 ------------------------------
 
 ## Change Log
+1.1: *Adds Remove and ContainsUnique methods* - 1 May 2019
 1.0: *Initialization* - 29 April 2019
 
 ------------------------------
