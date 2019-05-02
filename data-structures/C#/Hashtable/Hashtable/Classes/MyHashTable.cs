@@ -6,7 +6,7 @@ namespace Hashtable.Classes
 {
     public class MyHashTable
     {
-        private static LinkedList<MyNode>[] Map { get; set; }
+        public LinkedList<MyNode>[] Map { get; set; }
 
         /// <summary>
         /// Generates a predefined HashTable with 1024 positions.
@@ -100,6 +100,23 @@ namespace Hashtable.Classes
                         return item;
                     }
                 }
+            }
+
+            return null;
+        }
+
+        /// <summary>
+        /// Takes in a Key string and returns a list of all Key:Value pairs from the HashTable as dermined by the Hash algorythm.
+        /// </summary>
+        /// <param name="key">Key string.</param>
+        /// <returns>List containing all Key:Value pairs at hash.</returns>
+        public LinkedList<MyNode> GetBucket(string key)
+        {
+            int hashKey = Hash(key);
+
+            if (Map[hashKey] != null)
+            {
+                return Map[hashKey];
             }
 
             return null;
