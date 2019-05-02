@@ -4,7 +4,7 @@
 ------------------------------
 
 ## Description
-Takes in two Hash Tables, and performs a Left Join on them.  All values from the first table are added to a list, followed by any values in the second table with a matching key.  If table two does not have a matching key, null is added after the first value.  The key and values are added in the following order: [key, value1, value2].
+Takes in two `Hash Tables`, and performs a `Left Join` on them.  All values from the first table are added to a list, followed by any values in the second table with a matching key.  If table two does not have a matching key, `null` is added after the first value.  The key and values are added in the following order: `[key, value1, value2]`.
 
 ------------------------------
 
@@ -17,7 +17,7 @@ Takes in two Hash Tables, and performs a Left Join on them.  All values from the
 ------------------------------
 
 ## White Board
-![Left Join White Board](https://via.placeholder.com/750x500)
+![Left Join White Board](https://github.com/ARoska/data-structures-and-algorithms/blob/master/assets/LeftJoin/LeftJoin%20WB.jpg)
 
 ------------------------------
 
