@@ -12,6 +12,12 @@ namespace TreeIntersection
             Console.WriteLine("Hello World!");
         }
 
+        /// <summary>
+        /// Takes in two Binary Trees and uses a HashTable to find any values that are shared between the trees.  Returns a List of all common values.  If no values are shared returns null.
+        /// </summary>
+        /// <param name="treeOne">First Tree to compare against.</param>
+        /// <param name="treeTwo">Second Tree to compare against.</param>
+        /// <returns>List of shared values, or null if no values shared.</returns>
         public static List<int> TreeIntersection(MyBinaryTree<int> treeOne, MyBinaryTree<int> treeTwo)
         {
             if (treeOne.Root == null || treeTwo.Root == null)
@@ -71,6 +77,12 @@ namespace TreeIntersection
             return null;
         }
 
+        /// <summary>
+        /// Takes in two Binary Search Trees and uses a HashTable to find any values that are shared between the trees.  Returns a List of all common values.  If no values are shared returns null.
+        /// </summary>
+        /// <param name="treeOne">First Tree to compare against.</param>
+        /// <param name="treeTwo">Second Tree to compare against.</param>
+        /// <returns>List of shared values, or null if no values shared.</returns>
         public static List<int> TreeIntersection(MyBinarySearchTree treeOne, MyBinarySearchTree treeTwo)
         {
             if (treeOne.Root == null || treeTwo.Root == null)
@@ -130,6 +142,12 @@ namespace TreeIntersection
             return null;
         }
 
+        /// <summary>
+        /// Takes in one Binary Tree and one Binary Search Tree and uses a HashTable to find any values that are shared between the trees.  Returns a List of all common values.  If no values are shared returns null.
+        /// </summary>
+        /// <param name="treeOne">First Tree to compare against.</param>
+        /// <param name="treeTwo">Second Tree to compare against.</param>
+        /// <returns>List of shared values, or null if no values shared.</returns>
         public static List<int> TreeIntersection(MyBinaryTree<int> treeOne, MyBinarySearchTree treeTwo)
         {
             if (treeOne.Root == null || treeTwo.Root == null)
