@@ -17,7 +17,7 @@ This challenge was to take in two `Binary Trees` and determine any shared values
 
 ------------------------------
 ##### White Board
-![Tree Intersection White Board](https://via.placeholder.com/750x500)
+![Tree Intersection White Board](https://github.com/ARoska/data-structures-and-algorithms/blob/master/assets/TreeIntersection/TreeIntersection%20WB.jpg)
 
 ------------------------------
 
