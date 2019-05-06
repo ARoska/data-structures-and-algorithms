@@ -58,6 +58,11 @@ namespace Graph.Classes
         /// <returns>List of all Nodes.</returns>
         public List<Node<T>> GetNodes()
         {
+            if (AdjacencyList.Count < 1)
+            {
+                return null;
+            }
+
             List<Node<T>> nodes = new List<Node<T>>();
 
             foreach (var node in AdjacencyList)
@@ -75,6 +80,11 @@ namespace Graph.Classes
         /// <returns>List of all Edges and their weights.</returns>
         public List<Edge<T>> GetNeighbors(Node<T> node)
         {
+            if (AdjacencyList.Count < 1 || AdjacencyList[node] == null)
+            {
+                return null;
+            }
+
             List<Edge<T>> neighbors = new List<Edge<T>>();
 
             foreach (var neighbor in AdjacencyList[node])
