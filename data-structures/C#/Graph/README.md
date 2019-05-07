@@ -19,8 +19,9 @@ A C# implementation of a `Graph`. A `Graph` is a large data structure consisting
 | GetNeighbors | Retruns a list of all adjacent `Edges` extending out from the given `Node` in the `Graph` along with the weights associated | O(n) | O(n) | myGraph.GetNeighbors(Node) |
 | Size | Returns the total size of the `Graph` | O(1) | O(1) | myGraph.Size() |
 | BreadthFirst | Traverses the `Graph` in a breadth-first fasion starting from a given Root `Node`.  Only adds each `Node` once | O(n) | O(n) | myGraph.BreadthFirst(Root) |
+| PathExists | Uses BreadthFirst to determine if a path exists from a start `Node` to an end `Node` | O(n) | O(n) | myGraph.PathExists(StartNode, EndNode) |
 
 
 ## Change Log
-1.1: *Adds Breadth First traversal* - 06 May 2019
+1.1: *Adds BreadthFirst traversal and PathExists* - 06 May 2019
 1.0: *Initial build* - 06 May 2019

@@ -138,5 +138,23 @@ namespace Graph.Classes
 
             return nodes;
         }
+
+        /// <summary>
+        /// Takes in a staring point Node and an ending point Node and determines if there is a path from start to end.
+        /// </summary>
+        /// <param name="startNode">Node to start at.</param>
+        /// <param name="endNode">Node to end at.</param>
+        /// <returns>True if path from start to end exists.</returns>
+        public bool PathBetween(Node<T> startNode, Node<T> endNode)
+        {
+            List<Node<T>> path = BreadthFist(startNode);
+
+            if (path.Contains(endNode))
+            {
+                return true;
+            }
+
+            return false;
+        }
     }
 }

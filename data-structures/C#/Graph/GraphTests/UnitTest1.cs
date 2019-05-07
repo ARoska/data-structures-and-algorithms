@@ -172,5 +172,42 @@ namespace GraphTests
 
             Assert.Null(graph.BreadthFist(nodeA));
         }
+
+        [Fact]
+        public void WillReturnTrueIfPathFromAtoDExists()
+        {
+            MyGraph<int> graph = new MyGraph<int>();
+
+            Node<int> nodeA = graph.AddNode(5);
+            Node<int> nodeB = graph.AddNode(10);
+            Node<int> nodeC = graph.AddNode(1);
+            Node<int> nodeD = graph.AddNode(7);
+
+            graph.AddDirectedEdge(nodeA, nodeB, 1);
+            graph.AddDirectedEdge(nodeA, nodeC, 3);
+            graph.AddDirectedEdge(nodeA, nodeD, 10);
+            graph.AddDirectedEdge(nodeC, nodeB, 645);
+            graph.AddDirectedEdge(nodeC, nodeD, 2);
+
+            Assert.True(graph.PathBetween(nodeA, nodeD));
+        }
+
+        [Fact]
+        public void WillReturnFalsIfPathFromAtoDDoesNotExist()
+        {
+            MyGraph<int> graph = new MyGraph<int>();
+
+            Node<int> nodeA = graph.AddNode(5);
+            Node<int> nodeB = graph.AddNode(10);
+            Node<int> nodeC = graph.AddNode(1);
+            Node<int> nodeD = graph.AddNode(7);
+
+            graph.AddDirectedEdge(nodeA, nodeB, 1);
+            graph.AddDirectedEdge(nodeC, nodeB, 645);
+            graph.AddDirectedEdge(nodeC, nodeD, 2);
+
+            Assert.False(graph.PathBetween(nodeA, nodeD));
+        }
+
     }
 }
