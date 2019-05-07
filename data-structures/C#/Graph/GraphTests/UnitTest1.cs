@@ -106,5 +106,108 @@ namespace GraphTests
 
             Assert.Null(graph.GetNodes());
         }
+
+        [Fact]
+        public void CanBreadthFirstTraverseGraph()
+        {
+            MyGraph<int> graph = new MyGraph<int>();
+
+            Node<int> nodeA = graph.AddNode(5);
+            Node<int> nodeB = graph.AddNode(10);
+            Node<int> nodeC = graph.AddNode(1);
+            Node<int> nodeD = graph.AddNode(7);
+
+            graph.AddDirectedEdge(nodeA, nodeB, 1);
+            graph.AddDirectedEdge(nodeA, nodeC, 3);
+            graph.AddDirectedEdge(nodeC, nodeD, 2);
+
+            List<Node<int>> expectedList = new List<Node<int>>() { nodeA, nodeB, nodeC, nodeD };
+
+            List<Node<int>> actualList = graph.BreadthFist(nodeA);
+
+            Assert.Equal(expectedList, actualList);
+        }
+
+        [Fact]
+        public void WillOnlyAddEachNodeOnceInBreadthFirstTraversal()
+        {
+            MyGraph<int> graph = new MyGraph<int>();
+
+            Node<int> nodeA = graph.AddNode(5);
+            Node<int> nodeB = graph.AddNode(10);
+            Node<int> nodeC = graph.AddNode(1);
+            Node<int> nodeD = graph.AddNode(7);
+
+            graph.AddDirectedEdge(nodeA, nodeB, 1);
+            graph.AddDirectedEdge(nodeA, nodeC, 3);
+            graph.AddDirectedEdge(nodeA, nodeD, 10);
+            graph.AddDirectedEdge(nodeC, nodeB, 645);
+            graph.AddDirectedEdge(nodeC, nodeD, 2);
+
+            List<Node<int>> expectedList = new List<Node<int>>() { nodeA, nodeB, nodeC, nodeD };
+
+            List<Node<int>> actualList = graph.BreadthFist(nodeA);
+
+            Assert.Equal(expectedList, actualList);
+        }
+
+        [Fact]
+        public void WillReturnSingleNodeGraph()
+        {
+            MyGraph<int> graph = new MyGraph<int>();
+            Node<int> nodeA = graph.AddNode(5);
+
+            List<Node<int>> expectedList = new List<Node<int>>() { nodeA };
+
+            List<Node<int>> actualList = graph.BreadthFist(nodeA);
+
+            Assert.Equal(expectedList, actualList);
+        }
+
+        [Fact]
+        public void WillReturnNullIfNodeNotInGraph()
+        {
+            MyGraph<int> graph = new MyGraph<int>();
+            Node<int> nodeA = new Node<int>(50);
+
+            Assert.Null(graph.BreadthFist(nodeA));
+        }
+
+        [Fact]
+        public void WillReturnTrueIfPathFromAtoDExists()
+        {
+            MyGraph<int> graph = new MyGraph<int>();
+
+            Node<int> nodeA = graph.AddNode(5);
+            Node<int> nodeB = graph.AddNode(10);
+            Node<int> nodeC = graph.AddNode(1);
+            Node<int> nodeD = graph.AddNode(7);
+
+            graph.AddDirectedEdge(nodeA, nodeB, 1);
+            graph.AddDirectedEdge(nodeA, nodeC, 3);
+            graph.AddDirectedEdge(nodeA, nodeD, 10);
+            graph.AddDirectedEdge(nodeC, nodeB, 645);
+            graph.AddDirectedEdge(nodeC, nodeD, 2);
+
+            Assert.True(graph.PathBetween(nodeA, nodeD));
+        }
+
+        [Fact]
+        public void WillReturnFalsIfPathFromAtoDDoesNotExist()
+        {
+            MyGraph<int> graph = new MyGraph<int>();
+
+            Node<int> nodeA = graph.AddNode(5);
+            Node<int> nodeB = graph.AddNode(10);
+            Node<int> nodeC = graph.AddNode(1);
+            Node<int> nodeD = graph.AddNode(7);
+
+            graph.AddDirectedEdge(nodeA, nodeB, 1);
+            graph.AddDirectedEdge(nodeC, nodeB, 645);
+            graph.AddDirectedEdge(nodeC, nodeD, 2);
+
+            Assert.False(graph.PathBetween(nodeA, nodeD));
+        }
+
     }
 }

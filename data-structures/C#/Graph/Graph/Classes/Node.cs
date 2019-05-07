@@ -7,6 +7,7 @@ namespace Graph.Classes
     public class Node<T>
     {
         public T Value { get; set; }
+        public bool Visited { get; set; }
 
         public Node(T value)
         {

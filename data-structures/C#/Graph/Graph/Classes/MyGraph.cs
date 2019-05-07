@@ -103,5 +103,58 @@ namespace Graph.Classes
         {
             return _size;
         }
+
+        /// <summary>
+        /// Traverses the Graph with a breadth-first traversal, adding each Node to a List in the order they are accessed.  Nodes are only added once.
+        /// </summary>
+        /// <param name="root">Node to start traversal at.</param>
+        /// <returns>List of all Nodes accessed from root.</returns>
+        public List<Node<T>> BreadthFist(Node<T> root)
+        {
+            if (!AdjacencyList.ContainsKey(root))
+            {
+                return null;
+            }
+
+            List<Node<T>> nodes = new List<Node<T>>();
+            Queue<Node<T>> queue = new Queue<Node<T>>();
+            root.Visited = true;
+            queue.Enqueue(root);
+
+            while (queue.Count > 0)
+            {
+                Node<T> front = queue.Dequeue();
+                nodes.Add(front);
+
+                foreach (var child in AdjacencyList[front])
+                {
+                    if (!child.Node.Visited)
+                    {
+                        child.Node.Visited = true;
+                        queue.Enqueue(child.Node);
+                    }
+                }
+            }
+
+            return nodes;
+        }
+
+        /// <summary>
+        /// Takes in a staring point Node and an ending point Node and determines if there is a path from start to end.
+        /// </summary>
+        /// <param name="startNode">Node to start at.</param>
+        /// <param name="endNode">Node to end at.</param>
+        /// <returns>True if path from start to end exists.</returns>
+        public bool PathBetween(Node<T> startNode, Node<T> endNode)
+        {
+            List<Node<T>> path = BreadthFist(startNode);
+
+            if (path.Contains(endNode))
+            {
+                return true;
+            }
+
+            return false;
+        }
     }
 }
