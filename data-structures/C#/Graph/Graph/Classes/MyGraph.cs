@@ -111,11 +111,17 @@ namespace Graph.Classes
         /// <returns>List of all Nodes accessed from root.</returns>
         public List<Node<T>> BreadthFist(Node<T> root)
         {
+            if (!AdjacencyList.ContainsKey(root))
+            {
+                return null;
+            }
+
             List<Node<T>> nodes = new List<Node<T>>();
             Queue<Node<T>> queue = new Queue<Node<T>>();
+            root.Visited = true;
             queue.Enqueue(root);
 
-            while (queue.Count < 0)
+            while (queue.Count > 0)
             {
                 Node<T> front = queue.Dequeue();
                 nodes.Add(front);
