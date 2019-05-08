@@ -6,12 +6,12 @@ namespace Graph.Classes
 {
     public class MyGraph<T>
     {
-        public Dictionary<Node<T>, List<Edge<T>>> AdjacencyList { get; set; }
+        public Dictionary<Node<T>, Dictionary<Node<T>, int>> AdjacencyList { get; set; }
         private int _size = 0;
 
         public MyGraph()
         {
-            AdjacencyList = new Dictionary<Node<T>, List<Edge<T>>>();
+            AdjacencyList = new Dictionary<Node<T>, Dictionary<Node<T>, int>>();
         }
 
         /// <summary>
@@ -23,7 +23,7 @@ namespace Graph.Classes
         {
             Node<T> node = new Node<T>(value);
 
-            AdjacencyList.Add(node, new List<Edge<T>>());
+            AdjacencyList.Add(node, new Dictionary<Node<T>, int>());
             _size++;
 
             return node;
@@ -37,7 +37,7 @@ namespace Graph.Classes
         /// <param name="weight">Weight to apply to Edge.</param>
         public void AddDirectedEdge(Node<T> nodeA, Node<T> nodeB, int weight)
         {
-            AdjacencyList[nodeA].Add(new Edge<T>(nodeB, weight));
+            AdjacencyList[nodeA].Add(nodeB, weight);
         }
 
         /// <summary>
@@ -89,7 +89,8 @@ namespace Graph.Classes
 
             foreach (var neighbor in AdjacencyList[node])
             {
-                neighbors.Add(neighbor);
+                Edge<T> edge = new Edge<T>(neighbor.Key, neighbor.Value);
+                neighbors.Add(edge);
             }
 
             return neighbors;
@@ -128,10 +129,10 @@ namespace Graph.Classes
 
                 foreach (var child in AdjacencyList[front])
                 {
-                    if (!child.Node.Visited)
+                    if (!child.Key.Visited)
                     {
-                        child.Node.Visited = true;
-                        queue.Enqueue(child.Node);
+                        child.Key.Visited = true;
+                        queue.Enqueue(child.Key);
                     }
                 }
             }
