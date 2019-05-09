@@ -6,7 +6,7 @@ namespace Graph.Classes
 {
     public class MyGraph<T>
     {
-        public Dictionary<Node<T>, Dictionary<Node<T>, int>> AdjacencyList { get; set; }
+        public Dictionary<Node<T>, Neighbors> AdjacencyList { get; set; }
         private int _size = 0;
 
         public MyGraph()
