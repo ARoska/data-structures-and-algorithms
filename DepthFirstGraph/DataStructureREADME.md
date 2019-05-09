@@ -23,7 +23,7 @@ This process is done via recursion.  The method takes in a `Graph` and a `Node` 
 ## Visuals
 
 ##### Depth-First Graph Traversal White Board
-![Depth-First Graph Traversal White Board](https://via.placeholder.com/750x500)
+![Depth-First Graph Traversal White Board](https://github.com/ARoska/data-structures-and-algorithms/blob/master/assets/DepthFirstGraph/DepthFirstGraph%20-%20WB.jpg)
 
 ## Change Log
 1.0: *Initial Build* - 09 May 2019
