@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.28307.489
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DepthFirstGraph", "DepthFirstGraph\DepthFirstGraph.csproj", "{061BA2FA-DA5E-40B7-8408-7164DF4C8D9B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DepthFirstTests", "DepthFirstTests\DepthFirstTests.csproj", "{6C7F576D-0912-4415-B205-C1E131E0EF4B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{061BA2FA-DA5E-40B7-8408-7164DF4C8D9B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{061BA2FA-DA5E-40B7-8408-7164DF4C8D9B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{061BA2FA-DA5E-40B7-8408-7164DF4C8D9B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6C7F576D-0912-4415-B205-C1E131E0EF4B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C7F576D-0912-4415-B205-C1E131E0EF4B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C7F576D-0912-4415-B205-C1E131E0EF4B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C7F576D-0912-4415-B205-C1E131E0EF4B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
