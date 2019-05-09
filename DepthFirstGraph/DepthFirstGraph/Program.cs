@@ -11,7 +11,14 @@ namespace DepthFirstGraph
             Console.WriteLine("Hello World!");
         }
 
-        public static List<Node<string>> DepthFirstPreOrder(MyGraph<string> graph, Node<string> root, List<Node<string>> list)
+        public static List<Node<string>> DepthFirstPreOrder(MyGraph<string> graph, Node<string> root)
+        {
+            List<Node<string>> list = new List<Node<string>>();
+            Traverse(graph, root, list);
+            return list;
+        }
+
+        public static List<Node<string>> Traverse(MyGraph<string> graph, Node<string> root, List<Node<string>> list)
         {
             if (!graph.AdjacencyList.ContainsKey(root))
             {
@@ -28,7 +35,7 @@ namespace DepthFirstGraph
             {
                 if (node.Key.Visited == false)
                 {
-                    DepthFirstPreOrder(graph, node, list);
+                    Traverse(graph, node.Key, list);
                 }
             }
 
