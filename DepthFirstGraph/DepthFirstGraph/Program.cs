@@ -4,21 +4,21 @@ using System.Collections.Generic;
 
 namespace DepthFirstGraph
 {
-    class Program
+    public class Program
     {
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
         }
 
-        public static List<Node<string>> DepthFirstPreOrder(MyGraph<string> graph, Node<string> root)
+        public static List<Node<int>> DepthFirstPreOrder(MyGraph<int> graph, Node<int> root)
         {
-            List<Node<string>> list = new List<Node<string>>();
+            List<Node<int>> list = new List<Node<int>>();
             Traverse(graph, root, list);
             return list;
         }
 
-        public static List<Node<string>> Traverse(MyGraph<string> graph, Node<string> root, List<Node<string>> list)
+        public static List<Node<int>> Traverse(MyGraph<int> graph, Node<int> root, List<Node<int>> list)
         {
             if (!graph.AdjacencyList.ContainsKey(root))
             {
